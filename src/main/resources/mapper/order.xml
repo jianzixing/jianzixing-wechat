@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <sql id="getSearchOrderPublic">
+        from t_order t1,t_user t2 where t1.user_id=t2.id and t2.user_name=#{userName}
+    </sql>
+    <select id="getSearchOrder">
+        select t1.id as id
+        <include refid="getSearchOrderPublic"/>
+    </select>
+
+    <select id="getSearchOrderCount">
+        select count(1) as c
+        <include refid="getSearchOrderPublic"/>
+    </select>
+
+    <select id="searchUserOrder">
+        select t1.id as id from t_order t1,t_order_goods t2
+        where t1.id=t2.order_id
+        <if test="uid!=null">
+            and t1.user_id=#{uid}
+        </if>
+        <if test="keyword!=null">
+            and (t1.number like #{keyword} or t2.goods_name like #{keyword} or t2.serial_number like #{keyword})
+        </if>
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+</mapper>

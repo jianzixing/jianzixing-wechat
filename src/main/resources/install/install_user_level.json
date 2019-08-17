@@ -1,0 +1,37 @@
+{
+  "class": "com.jianzixing.webapp.tables.user.TableUserLevel",
+  "items": [
+    {
+      "id": 1,
+      "name": "青铜",
+      "startAmount": "0",
+      "endAmount": "999",
+      "logo": "init_level_1.png",
+      "detail": "青铜等级"
+    },
+    {
+      "id": 2,
+      "name": "白银",
+      "startAmount": "1000",
+      "endAmount": "2999",
+      "logo": "init_level_2.png",
+      "detail": "白银等级"
+    },
+    {
+      "id": 3,
+      "name": "黄金",
+      "startAmount": "3000",
+      "endAmount": "4999",
+      "logo": "init_level_3.png",
+      "detail": "黄金等级"
+    },
+    {
+      "id": 4,
+      "name": "钻石",
+      "startAmount": "5000",
+      "endAmount": "0",
+      "logo": "init_level_4.png",
+      "detail": "钻石等级"
+    }
+  ]
+}

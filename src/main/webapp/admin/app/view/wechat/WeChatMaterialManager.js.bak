@@ -1,0 +1,401 @@
+Ext.define('App.wechat.WeChatMaterialManager', {
+    extend: 'Ext.tab.Panel',
+
+    requires: [
+        'Ext.tab.Tab',
+        'Ext.grid.Panel',
+        'Ext.grid.column.Number',
+        'Ext.grid.column.Date',
+        'Ext.grid.column.Boolean',
+        'Ext.grid.View',
+        'Ext.toolbar.Paging',
+        'Ext.selection.CheckboxModel'
+    ],
+
+    activeTab: 0,
+    defaultListenerScope: true,
+    apis: {
+        WeChatPublic: {
+            getAdminAccount: {},
+            getAccounts: {},
+            getOpenAccounts: {}
+        },
+        WeChatMaterial: {
+            getTemporaryMaterials: {},
+            getForeverMaterials: {},
+            getRemoteMaterials: {}
+        }
+    },
+
+    items: [
+        {
+            xtype: 'panel',
+            layout: 'fit',
+            icon: Resource.png('jet', 'groupByTestProduction'),
+            title: '永久素材',
+            items: [
+                {
+                    xtype: 'gridpanel',
+                    name: 'forever_material',
+                    border: false,
+                    header: false,
+                    columns: [
+                        {
+                            xtype: 'gridcolumn',
+                            width: 200,
+                            dataIndex: 'url',
+                            text: '封面',
+                            renderer: function (v, mate, record) {
+                                var type = record.get('type');
+                                var width = 40;
+                                var height = 40;
+                                if (type == 'image') {
+                                    var url = record.get('url');
+                                    return '<div style="height: ' + height + 'px;width: ' + width + 'px;vertical-align: middle;display:table-cell;background-color: #BBBBBB">' +
+                                        '<img style="max-height: ' + height + 'px;max-width: ' + width + 'px;vertical-align: middle" src=' + url + '></div> ';
+                                }
+                                if (type == 'news') {
+                                    var content = record.get('content');
+                                    var news_item = content['news_item'];
+                                    var html = [];
+                                    for (var i = 0; i < news_item.length; i++) {
+                                        var url = news_item[i]['thumb_url'];
+                                        var link = news_item[i]['url'];
+                                        html.push('<a style="text-decoration: none" target="_blank" href="' + link + '">');
+                                        html.push('<div style="height: ' + height + 'px;width: ' + width + 'px;' +
+                                            'align-items: center;justify-content:center;display:flex;' +
+                                            'background-color: #BBBBBB;float: left;margin-right: 2px">');
+                                        html.push('<img style="max-height: ' + height + 'px;max-width: ' + width + 'px;" src=' + url + '>');
+                                        html.push('</div>');
+                                        html.push('</a>');
+                                    }
+                                    return html.join('');
+                                }
+                            }
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'media_id',
+                            text: '微信素材ID'
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'type',
+                            text: '素材类型',
+                            renderer: function (v) {
+                                if (v == 'image') return '图片';
+                                if (v == 'voice') return '语音';
+                                if (v == 'video') return '视频';
+                                if (v == 'thumb') return '缩略图';
+                                if (v == 'news') return '图文';
+                                return '其他';
+                            }
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'name',
+                            text: '素材名称',
+                            renderer: function (v) {
+                                if (v) return v;
+                                return '[其他]';
+                            }
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 200,
+                            dataIndex: 'url',
+                            text: '连接地址',
+                            renderer: function (v) {
+                                if (v) return v;
+                                return '[其他]';
+                            }
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'update_time',
+                            text: '创建时间',
+                            renderer: function (v) {
+                                if (v) return new Date(v * 1000).format();
+                                return '';
+                            }
+                        }
+                    ],
+                    dockedItems: [
+                        {
+                            xtype: 'pagingtoolbar',
+                            dock: 'bottom',
+                            width: 360,
+                            displayInfo: true
+                        },
+                        {
+                            xtype: 'toolbar',
+                            dock: 'top',
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'listChanges'),
+                                    text: '点击加载素材',
+                                    menu: {
+                                        xtype: 'menu',
+                                        width: 130,
+                                        items: [
+                                            {
+                                                icon: Resource.png('jet', 'toolWindowPalette'),
+                                                text: '列出图片素材',
+                                                materialType: 'image',
+                                                handler: 'onListAClick'
+                                            },
+                                            {
+                                                icon: Resource.png('jet', 'recording_3'),
+                                                text: '列出视频素材',
+                                                materialType: 'video',
+                                                handler: 'onListAClick'
+                                            },
+                                            {
+                                                icon: Resource.png('jet', 'includeNonStartedTests_Rerun'),
+                                                text: '列出语音素材',
+                                                materialType: 'voice',
+                                                handler: 'onListAClick'
+                                            },
+                                            {
+                                                icon: Resource.png('jet', 'moveToAnotherChangelist_dark'),
+                                                text: '列出图文素材',
+                                                materialType: 'news',
+                                                handler: 'onListAClick'
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'addYouTrack'),
+                                    text: '添加永久素材',
+                                    listeners: {
+                                        click: 'onAddAClick'
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'addLink'),
+                                    text: '添加图文素材',
+                                    listeners: {
+                                        click: 'onImageTextAClick'
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'delete'),
+                                    text: '删除永久素材',
+                                    listeners: {
+                                        click: 'onDelAClick'
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'editSource'),
+                                    text: '修改永久图文素材',
+                                    listeners: {
+                                        click: 'onEditAClick'
+                                    }
+                                },
+                                '->',
+                                {
+                                    xtype: 'label',
+                                    name: 'account_label_2',
+                                    text: '当前公众号：'
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'swapPanels'),
+                                    text: '切换公众号',
+                                    listeners: {
+                                        click: 'onSwitchAccountClick'
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    selModel: {
+                        selType: 'checkboxmodel'
+                    }
+                }
+            ]
+        },
+        {
+            xtype: 'panel',
+            layout: 'fit',
+            icon: Resource.png('jet', 'GroupByPrefix_dark'),
+            title: '临时素材',
+            items: [
+                {
+                    xtype: 'gridpanel',
+                    name: 'temporary_material',
+                    border: false,
+                    header: false,
+                    columns: [
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'mediaId',
+                            text: '微信素材ID'
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'type',
+                            text: '素材类型',
+                            renderer: function (v) {
+                                if (v == 'image') return '图片';
+                                if (v == 'voice') return '语音';
+                                if (v == 'video') return '视频';
+                                if (v == 'thumb') return '缩略图';
+                                if (v == 'news') return '图文';
+                                return '其他';
+                            }
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'fileName',
+                            text: '素材名称'
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 200,
+                            dataIndex: 'url',
+                            text: '连接地址'
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            width: 150,
+                            dataIndex: 'createTime',
+                            text: '创建时间',
+                            renderer: function (v) {
+                                if (v) return new Date(v * 1000).format();
+                                return '';
+                            }
+                        }
+                    ],
+                    dockedItems: [
+                        {
+                            xtype: 'pagingtoolbar',
+                            dock: 'bottom',
+                            width: 360,
+                            displayInfo: true
+                        },
+                        {
+                            xtype: 'toolbar',
+                            dock: 'top',
+                            items: [
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'listChanges'),
+                                    text: '列出临时素材',
+                                    listeners: {
+                                        click: 'onListBClick'
+                                    }
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'addIcon'),
+                                    text: '新增临时素材',
+                                    listeners: {
+                                        click: 'onAddBClick'
+                                    }
+                                },
+                                '->',
+                                {
+                                    xtype: 'label',
+                                    name: 'account_label_1',
+                                    text: '当前公众号：'
+                                },
+                                {
+                                    xtype: 'button',
+                                    icon: Resource.png('jet', 'swapPanels'),
+                                    text: '切换公众号',
+                                    listeners: {
+                                        click: 'onSwitchAccountClick'
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    selModel: {
+                        selType: 'checkboxmodel'
+                    }
+                }
+            ]
+        }
+    ],
+
+    // 永久
+    onListAClick: function (button, e, eOpts) {
+        // this.find('forever_material').refreshStore();
+        var type = button.materialType;
+        var store = this.apis.WeChatMaterial.getRemoteMaterials.createPageStore({
+            type: type
+        });
+        this.find('forever_material').setStore(store);
+        store.load();
+    },
+
+    onAddAClick: function (button, e, eOpts) {
+        var aw = Dialog.openWindow('App.wechat.WeChatMaterialWindow', {});
+        aw.setForever(true);
+    },
+
+    onImageTextAClick: function () {
+        var mit = Dialog.openWindow('App.wechat.WeChatMITWindow', {});
+    },
+
+    onDelAClick: function (button, e, eOpts) {
+
+    },
+
+    onEditAClick: function (button, e, eOpts) {
+
+    },
+
+    onListBClick: function (button, e, eOpts) {
+        this.find('temporary_material')
+    },
+
+    onAddBClick: function (button, e, eOpts) {
+        var bw = Dialog.openWindow('App.wechat.WeChatMaterialWindow', {});
+        bw.setForever(false);
+    },
+
+    onSwitchAccountClick: function (field, newValue, oldValue, eOpts) {
+        var self = this;
+        var win = Dialog.openWindow('App.wechat.WeChatSwitchAccount', {
+            apis: self.apis,
+            _callback: function () {
+                self.onAfterApply();
+            }
+        });
+        win.loadDatas();
+    },
+
+    onAfterApply: function () {
+        var self = this;
+        this.apis.WeChatPublic.getAdminAccount
+            .wait(this, '正在加载公众号信息...')
+            .call({}, function (data) {
+                self.find('account_label_1').setText("当前公众号：" + data['name'] + "（" + data['appid'] + "）");
+                self.find('account_label_2').setText("当前公众号：" + data['name'] + "（" + data['appid'] + "）");
+
+                var store1 = self.apis.WeChatMaterial.getForeverMaterials.createPageStore();
+                self.find('forever_material').setStore(store1);
+                var store2 = self.apis.WeChatMaterial.getTemporaryMaterials.createPageStore();
+                self.find('temporary_material').setStore(store2);
+
+                store1.load();
+                store2.load();
+            });
+    }
+
+});

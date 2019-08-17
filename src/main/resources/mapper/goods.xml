@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <sql id="getJoinWhere">
+        <if test="priceStart!=null or priceEnd!=null or skuStart!=null or skuEnd!=null">
+            inner join t_goods_sku t2 on t2.goods_id=t1.id
+            <if test="priceStart!=null">
+                and t2.price&gt;=#{priceStart}
+            </if>
+            <if test="priceEnd!=null">
+                and t2.price&lt;=#{priceEnd}
+            </if>
+            <if test="skuStart!=null">
+                and t2.amount&gt;=#{skuStart}
+            </if>
+            <if test="skuEnd!=null">
+                and t2.amount&lt;=#{skuEnd}
+            </if>
+        </if>
+    </sql>
+    <sql id="getSearchWhere">
+        <if test="name!=null">
+            and t1.name like #{name}
+        </if>
+        <if test="bid!=null">
+            and t1.bid=#{bid}
+        </if>
+        <if test="status!=null">
+            and t1.status=#{status}
+        </if>
+        <if test="gid!=null">
+            and t1.gid=#{gid}
+        </if>
+        <if test="createTimeStart!=null">
+            and t1.create_time&gt;=#{createTimeStart}
+        </if>
+        <if test="createTimeEnd!=null">
+            and t1.create_time&lt;=#{createTimeEnd}
+        </if>
+        <if test="hasSku!=null">
+            and t1.has_sku=#{hasSku}
+        </if>
+        <if test='hasSku!=null and hasSku!=1'>
+            <if test="priceStart!=null or priceEnd!=null or skuStart!=null or skuEnd!=null">
+                <if test="priceStart!=null">
+                    and t1.price&gt;=#{priceStart}
+                </if>
+                <if test="priceEnd!=null">
+                    and t1.price&lt;=#{priceEnd}
+                </if>
+                <if test="skuStart!=null">
+                    and t1.amount&gt;=#{skuStart}
+                </if>
+                <if test="skuEnd!=null">
+                    and t1.amount&lt;=#{skuEnd}
+                </if>
+            </if>
+        </if>
+    </sql>
+    <select id="getSearchIds">
+        <choose>
+            <when test='hasSku==1'>
+                select id from (select distinct(t1.id) as id from t_goods t1
+                <include refid="getJoinWhere"/>
+                where 1=1
+                <include refid="getSearchWhere"/>
+                ) tr
+                <if test="start>=0 and limit>0">
+                    limit #{start},#{limit}
+                </if>
+            </when>
+            <otherwise>
+                select distinct(t1.id) as id from t_goods t1
+                where 1=1
+                <include refid="getSearchWhere"/>
+                <if test="start>=0 and limit>0">
+                    limit #{start},#{limit}
+                </if>
+            </otherwise>
+        </choose>
+
+    </select>
+    <select id="getSearchCount">
+        <choose>
+            <when test='hasSku==1'>
+                select count(id) as c from (select distinct(t1.id) from t_goods t1
+                <include refid="getJoinWhere"/>
+                where 1=1
+                <include refid="getSearchWhere"/>
+                ) tr
+            </when>
+            <otherwise>
+                select count(distinct(t1.id)) as c from t_goods t1
+                where 1=1
+                <include refid="getSearchWhere"/>
+            </otherwise>
+        </choose>
+    </select>
+    <!--通过属性获取商品ID-->
+    <select id="getGoodsIdByProperty">
+        SELECT DISTINCT goods_id FROM `t_goods_property` WHERE attr_id=#{attrId} AND value_id in
+        <foreach collection="valueIds" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <!--通过查询条件获取品牌ID-->
+    <select id="getBidBySearch">
+        SELECT DISTINCT bid FROM `t_goods` WHERE 1=1
+        <if test="name!=null and ''!=name ">
+            and name like CONCAT('%',#{name},'%')
+        </if>
+        <if test="gid!=null and gid>0 ">
+            and gid=#{gid}
+        </if>
+    </select>
+</mapper>

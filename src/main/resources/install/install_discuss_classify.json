@@ -1,0 +1,40 @@
+{
+  "class": "com.jianzixing.webapp.tables.comment.TableDiscussClassify",
+  "items": [
+    {
+      "id": 1,
+      "name": "标准内容评论",
+      "code": "CONTENT",
+      "isAutoShow": 0,
+      "isSystem": 1
+    },
+    {
+      "id": 2,
+      "name": "新闻内容评论",
+      "code": "NEWS",
+      "isAutoShow": 0,
+      "isSystem": 1
+    },
+    {
+      "id": 3,
+      "name": "产品内容评论",
+      "code": "PRODUCT",
+      "isAutoShow": 0,
+      "isSystem": 1
+    },
+    {
+      "id": 4,
+      "name": "解决方案内容评论",
+      "code": "SOLUTION",
+      "isAutoShow": 0,
+      "isSystem": 1
+    },
+    {
+      "id": 5,
+      "name": "文档内容评论",
+      "code": "DOCUMENT",
+      "isAutoShow": 0,
+      "isSystem": 1
+    }
+  ]
+}

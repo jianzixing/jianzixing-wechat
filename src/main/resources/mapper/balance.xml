@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <sql id="getJoinWhere">
+        <if test="balanceStart!=null or balanceEnd!=null">
+            inner join t_balance t2 on t2.user_id=t1.id
+            <if test="balanceStart!=null">and t2.balance&gt;=#{balanceStart}</if>
+            <if test="balanceEnd!=null">and t2.balance&lt;=#{balanceEnd}</if>
+        </if>
+    </sql>
+    <sql id="getSearchWhere">
+        <if test="userName!=null">
+            and t1.user_name=#{userName}
+        </if>
+        <if test="openid!=null">
+            and t1.openid=#{openid}
+        </if>
+    </sql>
+    <select id="getSearchIds">
+        select t1.id from t_user t1
+        <include refid="getJoinWhere"/>
+        where 1=1
+        <include refid="getSearchWhere"/>
+        <if test="start>=0 and limit>0">
+            limit #{start},#{limit}
+        </if>
+    </select>
+    <select id="getSearchCount">
+        select count(t1.id) from t_user t1
+        <include refid="getJoinWhere"/>
+        where 1=1
+        <include refid="getSearchWhere"/>
+    </select>
+</mapper>

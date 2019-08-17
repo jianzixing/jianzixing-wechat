@@ -1,0 +1,57 @@
+{
+  "class": "com.jianzixing.webapp.tables.trigger.TableTrigger",
+  "items": [
+    {
+      "id": 1,
+      "name": "用户注册发送手机验证码",
+      "event": "REGISTER_SEND_SMS",
+      "processor": "com.jianzixing.webapp.service.trigger.impls.SmsTriggerProcessor",
+      "content": "请输入短信模板编号",
+      "sid": 1,
+      "processorType": 20,
+      "useRule": 0,
+      "timeType": 7,
+      "triggerInfinite": 1,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "忘记密码发送手机验证码",
+      "event": "FORGET_PWD_SEND_SMS",
+      "processor": "com.jianzixing.webapp.service.trigger.impls.SmsTriggerProcessor",
+      "content": "请输入短信模板编号",
+      "sid": 1,
+      "processorType": 20,
+      "useRule": 0,
+      "timeType": 7,
+      "triggerInfinite": 1,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 3,
+      "name": "确认收货赠送积分",
+      "event": "ORDER_USER_CONFIRM",
+      "processor": "com.jianzixing.webapp.service.trigger.impls.IntegralTriggerProcessor",
+      "processorType": 100,
+      "useRule": 0,
+      "timeType": 7,
+      "triggerInfinite": 1,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 4,
+      "name": "确认收货增加等级分数",
+      "event": "ORDER_USER_CONFIRM",
+      "processor": "com.jianzixing.webapp.service.trigger.impls.IntegralTriggerProcessor",
+      "processorType": 100,
+      "useRule": 0,
+      "timeType": 7,
+      "triggerInfinite": 1,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    }
+  ]
+}

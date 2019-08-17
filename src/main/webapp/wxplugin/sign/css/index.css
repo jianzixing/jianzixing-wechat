@@ -1,0 +1,202 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f7f7;
+    font-family: -apple-system, "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.user-info {
+    width: 100%;
+    height: 24vh;
+    background-color: #ffffff;
+    overflow: hidden;
+    color: #999999;
+    font-size: 13px;
+}
+
+.sign-body {
+    width: 100%;
+    height: 76vh;
+}
+
+.user-info .ui-header {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.user-info .ui-logo {
+    display: inline-block;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background-color: #999999;
+    overflow: hidden;
+    border: 1px solid #37b059;
+}
+
+.user-info .ui-logo img {
+    width: 8vh;
+    height: 8vh;
+}
+
+.user-info .ui-day {
+    display: inline-block;
+    width: 30vw;
+    height: 8vh;
+}
+
+.user-info .ui-day div {
+    overflow: hidden;
+    width: 100%;
+}
+
+.user-info .ui-day span {
+    font-size: 24px;
+    color: #37b059;
+}
+
+.user-info .ui-text {
+    text-align: center;
+    margin-top: 1.2vh;
+    padding: 5px 10px;
+}
+
+.user-info .ui-text-hl {
+    color: #cb755a;
+    margin: auto 5px;
+}
+
+.sign-body .sb-labels {
+    overflow: hidden;
+}
+
+.sign-body .sb-labels .empty {
+    text-align: center;
+    height: 30vh;
+    line-height: 30vh;
+    font-size: 15px;
+    color: #999999;
+}
+.sign-body .sb-labels ul {
+}
+
+.sign-body .sb-labels li {
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 15vw;
+    height: 15vw;
+    line-height: 15vw;
+    border-radius: 50%;
+    border: 2px solid #E5E5E5;
+    background-color: #EAE9E9;
+    color: #969696;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.sign-body .sb-labels .signed {
+    border: 2px solid #cde6d4;
+    background-color: #d9eddf;
+    color: #2fab51;
+}
+
+.sign-body .sb-labels .signed .sb-end {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: url("../img/yes.png") 0px 0px;
+    background-size: 10px 10px;
+}
+
+.sign-body .sb-labels .curr {
+    width: 30vw;
+    height: 30vw;
+    border: 5px solid #2fab51;
+    background-color: #ffffff;
+    color: #2fab51;
+    font-size: 15px;
+}
+
+.sign-body .sb-labels .curr-line {
+    width: 23vw;
+    margin: 5px auto 5px auto;
+    border-top: 1px solid #2fab51;
+}
+
+.sign-body .sb-labels .curr .curr-top {
+    display: block;
+    position: relative;
+    top: 5px;
+    height: 12vw;
+}
+
+.sign-body .sb-labels .curr .curr-bottom {
+    display: block;
+    position: relative;
+    bottom: 10px;
+}
+
+.sign-body .sb-labels .curr .curr-bottom.big {
+    font-size: 22px;
+}
+
+.sign-body .sb-labels .curr .curr-bottom .name {
+    font-size: 12px;
+}
+
+.sign-body .sb-labels .gift {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: -2px;
+    background: url("../img/gift.png") no-repeat 0px 0px;
+    background-size: 15vw 15vw;
+}
+
+.sign-body .sb-box {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+    margin-top: 20px;
+}
+
+.sign-body .sb-box .button {
+    width: 120px;
+    height: 36px;
+    border-radius: 36px;
+    background-color: #37b059;
+    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 5px auto 0px auto;
+}
+.sign-body .sb-box .link {
+    margin: 10px auto auto auto;
+}
+.sign-body .sb-box .link a {
+    text-decoration: none;
+    color: #ef8109;
+}
+
+.sign-body .sb-detail {
+    padding: 20px 30px;
+    font-size: 13px;
+    color: #999999;
+    overflow-y: auto;
+}
+.sign-body .sb-detail ul {
+    margin: 0px;
+    padding: 0px;
+}

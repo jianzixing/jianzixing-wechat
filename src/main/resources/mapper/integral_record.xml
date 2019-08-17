@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <sql id="getSearchWhere">
+        <if test="userName!=null">
+            and t1.user_name=#{userName}
+        </if>
+        <if test="openid!=null">
+            and t1.openid=#{openid}
+        </if>
+    </sql>
+    <select id="getSearchIds">
+        select t1.id from t_user t1
+        where 1=1
+        <include refid="getSearchWhere"/>
+        <if test="start>=0 and limit>0">
+            limit #{start},#{limit}
+        </if>
+    </select>
+    <select id="getSearchCount">
+        select count(t1.id) from t_user t1
+        where 1=1
+        <include refid="getSearchWhere"/>
+    </select>
+</mapper>

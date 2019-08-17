@@ -1,0 +1,13 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableAdmin",
+  "items": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "a805b40ad7f72a8b26bfb08348384a93",
+      "nickName": "Super管理员",
+      "realName": "Super管理员",
+      "isValid": 1
+    }
+  ]
+}

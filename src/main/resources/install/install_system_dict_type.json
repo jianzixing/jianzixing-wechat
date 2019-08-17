@@ -1,0 +1,55 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableSystemDictType",
+  "initPrimaryKey": 10000,
+  "primaryKey": "id",
+  "items": [
+    {
+      "id": 1,
+      "name": "客户性质",
+      "table": "TableClientUser",
+      "field": "nature",
+      "type": "1",
+      "isSystem": "1"
+    },
+    {
+      "id": 2,
+      "name": "客户来源",
+      "table": "TableClientUser",
+      "field": "source",
+      "type": "1",
+      "isSystem": "1"
+    },
+    {
+      "id": 3,
+      "name": "客户类别",
+      "table": "TableClientUser",
+      "field": "category",
+      "type": "1",
+      "isSystem": "1"
+    },
+    {
+      "id": 4,
+      "name": "所属行业",
+      "table": "TableClientUser",
+      "field": "tmt",
+      "type": "1",
+      "isSystem": "1"
+    },
+    {
+      "id": 5,
+      "name": "系统消息类型",
+      "table": "TableSystemMessage",
+      "field": "type",
+      "type": "1",
+      "isSystem": "1"
+    },
+    {
+      "id": 6,
+      "name": "公众号类型",
+      "table": "TableWeChatAccount",
+      "field": "type",
+      "type": "1",
+      "isSystem": "1"
+    }
+  ]
+}

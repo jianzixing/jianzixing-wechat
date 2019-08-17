@@ -1,0 +1,85 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 4,
+      "pid": 0,
+      "module": "notice",
+      "linkModule": "notice",
+      "text": "统计",
+      "type": "normal",
+      "tabIcon": "image/jeticon/library.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 5
+    },
+    {
+      "id": 40,
+      "pid": 4,
+      "module": "",
+      "linkModule": "notice",
+      "text": "统计管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 4001,
+      "pid": 40,
+      "module": "App.statistics.StatisticsViewManager",
+      "linkModule": "notice",
+      "text": "访问统计管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_22.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Statistics": [
+          "getStatistics"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "pid": 4,
+      "module": "",
+      "linkModule": "notice",
+      "text": "日志管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 4101,
+      "pid": 41,
+      "module": "App.log.RequestAddressManager",
+      "linkModule": "notice",
+      "text": "访问日志管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_72.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Log": [
+          "getRequestAddressLog"
+        ]
+      }
+    }
+  ]
+}

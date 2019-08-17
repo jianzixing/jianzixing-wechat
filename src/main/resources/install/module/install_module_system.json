@@ -1,0 +1,327 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 6,
+      "pid": 0,
+      "module": "system",
+      "linkModule": "system",
+      "text": "系统",
+      "type": "normal",
+      "tabIcon": "image/jeticon/settings.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 6
+    },
+    {
+      "id": 60,
+      "pid": 6,
+      "module": "",
+      "linkModule": "system",
+      "text": "权限管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 6001,
+      "pid": 60,
+      "module": "App.system.AdminManager",
+      "linkModule": "system",
+      "text": "管理员管理",
+      "type": "normal",
+      "tabIcon": "image/micon/user.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "Admin": [
+          "getAdmins",
+          "deleteAdmin",
+          "updatePassword",
+          "getPosition",
+          "getDepartment",
+          "addAdmin",
+          "updateAdmin"
+        ],
+        "System": [
+          "getRoles"
+        ]
+      }
+    },
+    {
+      "id": 6002,
+      "pid": 60,
+      "module": "App.system.ModuleManager",
+      "linkModule": "system",
+      "text": "模块管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_34.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "Module": [
+          "getTopModules",
+          "getFullTreeModules",
+          "deleteTopModule",
+          "addModule",
+          "updateModule"
+        ]
+      }
+    },
+    {
+      "id": 6003,
+      "pid": 60,
+      "module": "App.system.VisitModuleManager",
+      "linkModule": "system",
+      "text": "权限访问管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_39.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 6,
+      "authorize": {
+        "Module": [
+          "getAllTreeModules"
+        ],
+        "System": [
+          "getPageApis",
+          "getAccessPage",
+          "addPageApi",
+          "deletePageApis",
+          "updatePageApi"
+        ]
+      }
+    },
+    {
+      "id": 6004,
+      "pid": 60,
+      "module": "App.system.RoleManager",
+      "linkModule": "system",
+      "text": "角色管理",
+      "type": "normal",
+      "tabIcon": "image/micon/role.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 7,
+      "authorize": {
+        "System": [
+          "getRoles",
+          "addRole",
+          "deleteRole",
+          "updateRole",
+          "setModuleAndRole",
+          "removeModuleAndRole",
+          "getRoleTreeModules",
+          "getRoleTreeList",
+          "getAllTreeModules"
+        ]
+      }
+    },
+    {
+      "id": 6005,
+      "pid": 60,
+      "module": "App.system.DepartmentManager",
+      "linkModule": "system",
+      "text": "部门管理",
+      "type": "normal",
+      "tabIcon": "image/micon/department.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3,
+      "authorize": {
+        "Admin": [
+          "getDepartment",
+          "addDepartment",
+          "deleteDepartment",
+          "updateDepartment"
+        ]
+      }
+    },
+    {
+      "id": 6006,
+      "pid": 60,
+      "module": "App.system.PositionManager",
+      "linkModule": "system",
+      "text": "职位管理",
+      "type": "normal",
+      "tabIcon": "image/micon/position.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4,
+      "authorize": {
+        "Admin": [
+          "getPosition",
+          "addPosition",
+          "deletePosition",
+          "updatePosition"
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "pid": 6,
+      "module": "",
+      "linkModule": "system",
+      "text": "系统配置",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3
+    },
+    {
+      "id": 6201,
+      "pid": 62,
+      "module": "App.message.SystemMessage",
+      "linkModule": "system",
+      "text": "系统消息管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_76.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "SystemMessage": [
+          "sendMessage",
+          "sendAllMessage",
+          "delMessage",
+          "getMessages",
+          "markRead",
+          "markAllRead"
+        ],
+        "Admin": [
+          "getAdmins"
+        ],
+        "SystemDict": [
+          "getDictsByTable"
+        ]
+      }
+    },
+    {
+      "id": 6202,
+      "pid": 62,
+      "module": "App.system.SystemConfigManager",
+      "linkModule": "system",
+      "text": "系统参数管理",
+      "type": "normal",
+      "tabIcon": "image/micon/system_config.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "SystemConfig": [
+          "addGroup",
+          "delGroup",
+          "updateGroup",
+          "getGroups",
+          "addConfig",
+          "delConfig",
+          "updateConfig",
+          "getConfigs"
+        ]
+      }
+    },
+    {
+      "id": 6203,
+      "pid": 62,
+      "module": "App.file.FileExplorer",
+      "linkModule": "system",
+      "text": "文件管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_1.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3,
+      "authorize": {
+        "File": [
+          "getFileGroups",
+          "addFileGroup",
+          "deleteFiles",
+          "moveGroup",
+          "updateFileGroup",
+          "deleteFileGroup",
+          "getFiles",
+          "getFileHttpUrl"
+        ]
+      }
+    },
+    {
+      "id": 6204,
+      "pid": 62,
+      "module": "App.system.SystemDictManager",
+      "linkModule": "system",
+      "text": "字典管理",
+      "type": "normal",
+      "tabIcon": "image/micon/dict.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4,
+      "authorize": {
+        "SystemDict": [
+          "getTypes",
+          "getDicts",
+          "addDictType",
+          "delDictType",
+          "updateType",
+          "addDict",
+          "delDict",
+          "updateDict",
+          "copyType"
+        ]
+      }
+    },
+    {
+      "id": 6205,
+      "pid": 62,
+      "module": "App.system.RobotsManager",
+      "linkModule": "system",
+      "text": "Robots协议管理",
+      "type": "normal",
+      "tabIcon": "image/micon/pacong.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "Robots": [
+          "addRobots",
+          "delRobots",
+          "updateRobots",
+          "getRobots",
+          "updateRobotsPos"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+
+.catalog {
+    background: #fff;
+    width: 100%;
+}
+
+.catalog .nav {
+    width: 81px;
+    height: 100%;
+}
+
+.catalog .nav .item {
+    text-align: center;
+    line-height: 45px;
+    width: 81px;
+    height: 45px;
+    color: #333;
+    font-size: 14px;
+    border-left: 3px solid #fff;
+}
+
+.catalog .nav .item.active {
+    color: #ab2b2b;
+    font-size: 18px;
+    border-left: 3px solid #ab2b2b;
+}
+
+.catalog .cate {
+    flex: 1;
+    height: 100%;
+}
+
+.banner {
+    display: block;
+    height: 111px;
+    width: 100%;
+    position: relative;
+}
+
+.banner .image {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    border-radius: 2px;
+    height: 86px;
+    width: 100%;
+}
+
+.banner .txt {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    left: 0;
+    height: 86px;
+    line-height: 86px;
+    width: 100%;
+}
+
+.catalog .hd {
+    height: 54px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog .hd .txt {
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+    padding: 0 5px;
+    width: auto;
+}
+
+.catalog .hd .line {
+    width: 20px;
+    height: 1px;
+    background: #d9d9d9;
+}
+
+.catalog .bd {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.catalog .bd .item {
+    display: block;
+    float: left;
+    height: 108px;
+    width: 72px;
+    margin: 0 8px;
+}
+
+.catalog .bd .item.last {
+    margin-right: 0;
+}
+
+.catalog .bd .item .icon {
+    height: 72px;
+    width: 72px;
+}
+
+.catalog .bd .item .txt {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    height: 36px;
+    width: 72px;
+}
+a{
+    text-decoration: none;
+}

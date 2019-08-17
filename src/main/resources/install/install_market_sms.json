@@ -1,0 +1,14 @@
+{
+  "class": "com.jianzixing.webapp.tables.marketing.TableMarketSms",
+  "items": [
+    {
+      "id": 1,
+      "name": "阿里云通信短信服务",
+      "implName": "阿里云通信",
+      "impl": "com.jianzixing.webapp.service.marketing.sms.AlidayuSmsMarketing",
+      "type": 1,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    }
+  ]
+}

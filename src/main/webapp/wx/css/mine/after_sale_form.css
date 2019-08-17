@@ -1,0 +1,591 @@
+body {
+    background-color: #f6f6f6;
+}
+
+.react-root {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.react-root .react-view {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+.homePageBody {
+    overflow: hidden;
+    overflow-y: auto;
+    flex: 1 1 0%;
+    position: relative;
+}
+
+.react-root .goods {
+    padding: 25px 0px 30px 0px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.goods .gt {
+    flex-direction: row;
+    align-items: center;
+}
+
+.goods .gt .img img {
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.goods .gtn {
+    height: 60px;
+    width: 245px;
+    justify-content: space-between;
+}
+
+.goods .gtn span {
+    display: -webkit-box;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 34px;
+    white-space: normal;
+}
+
+.goods .gtn .amount {
+    flex: 1 1 0%;
+    flex-direction: row;
+    margin-top: 13px;
+}
+
+.goods .gtn .gtda {
+    display: inline-block;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: JDZhengHT-Regular;
+    line-height: 14px;
+    color: #333333;
+}
+
+.goods .gtn .gtda_label {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.react-root .as_type {
+
+}
+
+.as_type .reason {
+    padding: 24px 16px;
+    margin-bottom: 16px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 16px;
+}
+
+.as_type .reason .title {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.as_type .reason .title .left {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #333333;
+}
+
+.as_type .reason .title .right {
+    flex-direction: row;
+    align-items: center;
+}
+
+.as_type .reason .title .right .value {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #333333;
+}
+
+.as_type .reason .title .right .icon {
+    height: 6px;
+    width: 21px;
+    margin-left: 12px;
+    background-image: url(../../images/icons/more.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}
+
+.as_type .reason .detail {
+    display: inline-block;
+    margin: 12px 0px 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.as_type .problem {
+    padding: 24px 16px;
+    margin-bottom: 16px;
+    background-color: rgb(255, 255, 255);
+}
+
+.as_type .problem .detail {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+}
+
+.as_type .problem .editor {
+    margin-top: 11px;
+    padding-top: 11px;
+    padding-right: 13px;
+    padding-left: 13px;
+    background-color: rgb(246, 246, 246);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(246, 246, 246);
+}
+.as_type .problem .editor textarea {
+    background-color: rgb(246, 246, 246);
+    border-color: black;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: 13px;
+    line-height: inherit;
+    font-family: inherit;
+    padding: 0px;
+    height: 110px;
+}
+
+.as_type .problem .word_tips {
+    height: 34px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 3px;
+    background-color: rgb(246, 246, 246);
+}
+
+.as_type .problem .word_tips .df {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    line-height: 19px;
+}
+
+.as_type .problem .word_tips .has {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    line-height: 19px;
+}
+.as_type .problem .pic_tool {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-top: 16px;
+}
+
+.as_type .problem .pic_tool .icon img {
+    width: 27px;
+    height: 27px;
+    margin-right: 26px;
+}
+.as_type .problem .pics {
+    padding-bottom: 17px;
+    padding-top: 17px;
+    padding-left: 11px;
+    background-color: rgb(246, 246, 246);
+    border-style: solid;
+    border-width: 1px 0px 0px;
+    border-color: rgb(238, 238, 238) black black;
+}
+
+.as_type .problem .pics .inner {
+    width: auto;
+    flex-direction: row;
+    min-width: 100%;
+    height: 100%;
+}
+
+.as_type .problem .pics .inner .item {
+    height: 57px;
+    width: 57px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 5px;
+}
+
+.as_type .problem .pics .inner .item img {
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
+}
+
+.as_type .problem .pics .inner .item .close {
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.as_type .problem .pics .inner .item .close img {
+    height: 15px;
+    width: 15px;
+}
+
+.as_type .delivery {
+    padding: 24px 16px;
+    margin-bottom: 16px;
+    background-color: rgb(255, 255, 255);
+}
+.as_type .delivery .title {
+    display: inline-block;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+    padding-top: 24px;
+    padding-bottom: 15px;
+}
+
+.as_type .delivery .title .name {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #333333;
+}
+
+.as_type .delivery .title .dl {
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 24px;
+}
+
+.as_type .delivery .btn {
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    margin-right: 15px;
+    height: 33px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+    border-radius: 16px;
+}
+
+.as_type .delivery .btn span {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    color: rgb(46, 45, 45);
+    line-height: 15px;
+    font-weight: normal;
+}
+
+.as_type .delivery .btn.cur {
+    border-color: rgb(240, 37, 15);
+    background-color: rgb(254, 244, 243);
+}
+
+.as_type .delivery .btn.cur span {
+    color: rgb(240, 37, 15);
+}
+
+.as_type .delivery .tips span {
+    display: inline-block;
+    margin: 0px 0px 0px 8px;
+    padding: 0px;
+    font-size: 11px;
+    color: rgb(132, 132, 132);
+    line-height: 13px;
+}
+
+.as_type .delivery .split {
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    border-color: black black rgb(238, 238, 238);
+}
+
+.as_type .delivery .nd {
+    display: inline;
+    margin: 0px;
+    padding: 0px 10px 0px 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 13px;
+}
+
+.serviceInfo-linear-gradient-red {
+    background-image: -webkit-linear-gradient(76deg, #FF614D 0%, #FE7552 100%);
+    background-image: -moz- oldlinear-gradient(76deg, #FF614D 0%, #FE7552 100%);
+    background-image: -o-linear-gradient(76deg, #FF614D 0%, #FE7552 100%);
+    background-image: linear-gradient(14deg, #FF614D 0%, #FE7552 100%);
+}
+
+.as_type .form {
+    flex-direction: row;
+    align-items: center;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    border-color: black black rgb(238, 238, 238);
+    padding: 10px 0px;
+}
+
+.as_type .form .label {
+    display: inline-block;
+    margin: 0px 18px 0px 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 79px;
+    line-height: 19px;
+}
+
+.as_type .form .value {
+    flex: 1 1 0%;
+    background-color: rgb(255, 255, 255);
+}
+
+.as_type .form .value input, textarea {
+    background-color: transparent;
+    border-color: black;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: rgb(46, 45, 45);
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: 13px;
+    line-height: inherit;
+    font-family: inherit;
+    padding: 0px;
+    height: 55px;
+    flex: 1 1 0%;
+}
+
+.as_type .form .value textarea {
+    resize: none;
+}
+
+.as_type .submit_tool {
+    height: 55px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.as_type .s1 {
+    align-items: center;
+    margin-left: 16px;
+}
+.as_type .s1 span {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 19px;
+}
+
+.as_type .s2 {
+    height: 55px;
+    width: 132px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.as_type .s2 span {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 19px;
+}
+
+@keyframes myreactPopup {
+    0% {
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -o-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.react-root .myreact-popup-content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    display: none;
+    z-index: 101;
+}
+.react-root .myreact-popup-content-show {
+    display: block;
+    -webkit-animation: myreactPopup 200ms;
+    -moz-animation: myreactPopup 200ms;
+    -o-animation: myreactPopup 200ms;
+    animation: myreactPopup 200ms;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+.react-root .myreact-pop-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    z-index: 100;
+}
+.react-root .myreact-popup-overlay-show {
+    display: block;
+}
+
+
+.react-root .reason_list {
+    height: 307px;
+    background-color: rgb(255, 255, 255);
+}
+.react-root .reason_title {
+    height: 52px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.react-root .reason_title_f1 {
+    flex: 1 1 0%;
+}
+
+.react-root .reason_title_f2 {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 19px;
+}
+.react-root .reason_title_f3 {
+    flex: 3 1 0%;
+    align-items: center;
+}
+.react-root .reason_title_f4 {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+}
+.react-root .reason_title_f5 {
+    background-color: transparent;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 19px;
+}
+.react-root .reason_title_option {
+
+}
+
+.react-root .reason_title_option .close_img {
+    width: 14px;
+    height: 14px;
+}
+.react-root .react_content {
+    overflow: hidden scroll;
+    flex: 1 1 0%;
+    z-index: 0;
+}
+.react-root .react_item_1 {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.react-root .react_item_2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 17px;
+}
+.react-root .react_item_3 {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    line-height: 18px;
+}

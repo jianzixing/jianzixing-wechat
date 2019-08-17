@@ -1,0 +1,105 @@
+.search {
+    height: 44px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+.search .back{
+    background: url('../images/back.png') center no-repeat;
+    background-size: 100%;
+    width: 26px;
+    height: 26px;
+}
+.search .menu{
+    background: url('../images/menu.png') center no-repeat;
+    background-size: 26px 26px;
+    width: 50px;
+    height: 26px;
+}
+
+.search .input {
+    width: 90%;
+    height: 30px;
+    background: #ededed;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin: 0 8px 0 10px;
+}
+
+.search .icon {
+    background: url('../images/catalog/search.png') center no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 14px;
+}
+
+.search input{
+    margin-left: 10px;
+    flex: 1;
+    border: 0;
+    background: none;
+    outline: none;
+}
+
+.search .search-btn{
+    box-sizing: border-box;
+    background-color: #e93b3d;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 30px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    display: none;
+    margin-right: 5px;
+}
+
+.search .txt {
+    height: 21px;
+    line-height: 21px;
+    color: #666;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.search-tip{
+    position: fixed;
+    top: 47px;
+    background-color: #ffffff;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+}
+.search-history .title-top{
+    display: flex;
+}
+.search-history .history-list, .search-recommend .recommend-list{
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-history .history-list a, .search-recommend .recommend-list a{
+    padding: 3px 8px;
+    background-color: #f0f2f5;
+    color:#686868;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.search-history .title-top .del {
+    background: url('../images/catalog/delete.png') center no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+}
+.search-recommend{
+    margin-top: 10px;
+}

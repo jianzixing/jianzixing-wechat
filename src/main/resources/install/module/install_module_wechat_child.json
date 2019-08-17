@@ -1,0 +1,182 @@
+{
+  "class": "com.jianzixing.webapp.tables.wechat.TableWeChatTrees",
+  "items": [
+    {
+      "id": 1,
+      "type": 1,
+      "pid": 0,
+      "module": "",
+      "text": "公众号功能",
+      "leaf": 0,
+      "expanded": 1
+    },
+    {
+      "id": 10,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatAccountReplyManager",
+      "text": "自动回复",
+      "leaf": 1
+    },
+    {
+      "id": 11,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatMenuManager",
+      "text": "自定义菜单",
+      "leaf": 1,
+      "enable": 0
+    },
+    {
+      "id": 12,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatMassManager",
+      "text": "定时群发",
+      "leaf": 1
+    },
+    {
+      "id": 13,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatMaterialManager",
+      "text": "微信素材",
+      "leaf": 1
+    },
+    {
+      "id": 14,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatImageTextManager",
+      "text": "自定义图文",
+      "leaf": 1
+    },
+    {
+      "id": 15,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatUserManager",
+      "text": "粉丝管理",
+      "leaf": 1
+    },
+    {
+      "id": 16,
+      "type": 1,
+      "pid": 1,
+      "module": "App.wechat.WeChatQRCodeManager",
+      "text": "二维码/转化链接",
+      "leaf": 1
+    },
+    {
+      "id": 2,
+      "type": 1,
+      "pid": 0,
+      "module": "",
+      "text": "扩展功能管理",
+      "leaf": 0,
+      "expanded": 1
+    },
+    {
+      "id": 20,
+      "type": 1,
+      "pid": 2,
+      "module": "",
+      "text": "签到系统管理",
+      "leaf": 0,
+      "expanded": 0
+    },
+    {
+      "id": 200,
+      "type": 1,
+      "pid": 20,
+      "module": "App.wxplugin.WXSignGroupManager",
+      "text": "签到分组管理",
+      "leaf": 1
+    },
+    {
+      "id": 201,
+      "type": 1,
+      "pid": 20,
+      "module": "App.wxplugin.WXSignAwardManager",
+      "text": "签到奖励管理",
+      "leaf": 1
+    },
+    {
+      "id": 202,
+      "type": 1,
+      "pid": 20,
+      "module": "App.wxplugin.WXSignRecordManager",
+      "text": "签到记录管理",
+      "leaf": 1
+    },
+    {
+      "id": 203,
+      "type": 1,
+      "pid": 20,
+      "module": "App.wxplugin.WXSignGetManager",
+      "text": "用户奖品管理",
+      "leaf": 1
+    },
+    {
+      "id": 21,
+      "type": 1,
+      "pid": 2,
+      "module": "",
+      "text": "投票系统管理",
+      "leaf": 0,
+      "expanded": 0
+    },
+    {
+      "id": 210,
+      "type": 1,
+      "pid": 21,
+      "module": "App.wxplugin.WXVotingGroupManager",
+      "text": "投票分组管理",
+      "leaf": 1
+    },
+    {
+      "id": 211,
+      "type": 1,
+      "pid": 21,
+      "module": "App.wxplugin.WXVotingItemManager",
+      "text": "投票名单管理",
+      "leaf": 1
+    },
+    {
+      "id": 22,
+      "type": 1,
+      "pid": 2,
+      "module": "App.wxplugin.WXEmptyPanel",
+      "text": "摇一摇抽奖管理",
+      "leaf": 1,
+      "expanded": 0
+    },
+    {
+      "id": 23,
+      "type": 1,
+      "pid": 2,
+      "module": "App.wxplugin.WXEmptyPanel",
+      "text": "裂变红包管理",
+      "leaf": 1,
+      "expanded": 0
+    },
+    {
+      "id": 24,
+      "type": 1,
+      "pid": 2,
+      "module": "App.wxplugin.WXEmptyPanel",
+      "text": "分享红包管理",
+      "leaf": 1,
+      "expanded": 0
+    },
+    {
+      "id": 25,
+      "type": 1,
+      "pid": 2,
+      "module": "App.wxplugin.WXEmptyPanel",
+      "text": "转盘抽奖管理",
+      "leaf": 1,
+      "expanded": 0
+    }
+  ]
+}

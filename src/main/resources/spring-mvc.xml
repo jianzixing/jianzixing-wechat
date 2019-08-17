@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:annotation-config/>
+    <!-- 把标记了@Controller注解的类转换为bean -->
+    <context:component-scan
+            base-package="
+            com.jianzixing.webapp.admin,
+            com.jianzixing.webapp.web,
+            com.jianzixing.webapp.app,
+            com.jianzixing.webapp.template"/>
+
+    <!--只能使用自己的处理器且不能使用mvc:annotation-driven注解-->
+    <bean class="org.mimosaframework.springmvc.MimosaRequestHandlerMapping">
+        <property name="sessionTemplate" ref="mimosaSessionTemplate"/>
+        <property name="curdImplementClass" value="com.jianzixing.webapp.service.CurdService"/>
+        <property name="prefixs">
+            <map>
+                <entry key="com.jianzixing.webapp.admin" value="/admin"/>
+                <entry key="com.jianzixing.webapp.app" value="/app"/>
+                <entry key="com.jianzixing.webapp.web" value="/web"/>
+            </map>
+        </property>
+        <property name="replaces">
+            <map>
+                <entry key="com.jianzixing.webapp.app" value="App;"/>
+                <entry key="com.jianzixing.webapp.web" value="Web;"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="org.mimosaframework.springmvc.MimosaRequestHandlerAdapter">
+        <property name="beforeArgumentResolvers">
+            <list>
+                <bean class="com.jianzixing.webapp.handler.RequestAdminInstance"/>
+                <bean class="com.jianzixing.webapp.handler.RequestUploadFileInstance"/>
+            </list>
+        </property>
+        <property name="beforeReturnValueHandlers">
+            <list>
+                <bean class="com.jianzixing.webapp.handler.ResponseFileObjectInstance"/>
+                <bean class="com.jianzixing.webapp.handler.ResponseFileInstance"/>
+                <bean class="com.jianzixing.webapp.handler.ResponseFileLogoInstance"/>
+            </list>
+        </property>
+        <property name="messageConverters">
+            <list>
+                <ref bean="stringHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="stringHttpMessageConverter" class="org.mimosaframework.springmvc.utils.UTF8StringHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+                <value>text/plain;charset=UTF-8</value>
+                <value>text/xml;charset=UTF-8</value>
+                <value>application/json;charset=utf-8</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--SpringMVC上传文件时，需要配置MultipartResolver处理器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="104857600"/>
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>
+
+    <!-- freemarker视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
+        <property name="contentType" value="text/html; charset=utf-8"/>
+        <property name="cache" value="true"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="order" value="0"/>
+    </bean>
+
+    <!-- freemarker的配置 -->
+    <bean id="freemarkerConfig" class="com.jianzixing.webapp.template.OverrideFreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/"/>
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="freemarkerSettings">
+            <props>
+                <!--<prop key="template_update_delay">3600</prop>-->
+                <prop key="template_update_delay">0</prop>
+                <prop key="locale">zh_CN</prop>
+                <prop key="datetime_format">yyyy-MM-dd</prop><!-- 时间格式化 -->
+                <prop key="date_format">yyyy-MM-dd</prop>
+                <prop key="number_format">#.##</prop>
+            </props>
+        </property>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/**"/>
+            <bean class="com.jianzixing.webapp.handler.AdminLoginInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/web/**"/>
+            <mvc:mapping path="/wx/**"/>
+            <bean class="com.jianzixing.webapp.handler.WebLoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+</beans>

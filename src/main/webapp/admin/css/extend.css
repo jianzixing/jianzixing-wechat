@@ -1,0 +1,1048 @@
+body {
+    margin: 0px;
+    border: 0px;
+}
+
+.ex_button {
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: 0px;
+    box-shadow: none !important;
+    color: #666;
+}
+
+@keyframes button_select {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 0px;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 0px;
+    }
+}
+
+.ex_button_over {
+    animation: button_select 0.3s 1 forwards;
+    border: 0px
+}
+
+.ex_button span {
+    color: #000000
+}
+
+.td_align_middle {
+    vertical-align: middle
+}
+
+.float_right {
+    float: right;
+}
+
+.mg6 {
+    margin: 6px auto 6px 6px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.x-grid-record-white {
+    background: #fff;
+}
+
+.label-middle .x-autocontainer-innerCt {
+    vertical-align: middle !important;
+}
+
+.set-overflow-visible .x-panel-bodyWrap {
+    overflow: visible !important;
+}
+
+/**colorselector**/
+.x-colorpicker {
+    overflow: visible
+}
+
+.x-colorpicker > .x-box-inner {
+    overflow: visible
+}
+
+.x-colorpicker .x-form-item-label {
+    text-align: center
+}
+
+.x-colopicker-escape-overflow {
+    overflow: visible
+}
+
+.x-colopicker-escape-overflow > .x-box-inner {
+    overflow: visible
+}
+
+.x-colorpicker-colormap {
+    background-image: url(ux/images/colorpick/map_gradient.png)
+}
+
+.x-colorpicker-colormap-draghandle-container {
+    overflow: visible;
+    z-index: 1
+}
+
+.x-colorpicker-colormap-blender {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.x-colorpicker-colormap-draghandle {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: -7px;
+    top: -7px;
+    background-image: url(ux/images/colorpick/drag_circle.png)
+}
+
+.x-colorpicker-draghandle-container {
+    width: 20px
+}
+
+.x-colorpicker-draghandle-container .x-autocontainer-outerCt {
+    height: 100%
+}
+
+.x-colorpicker-draghandle {
+    width: 32px;
+    height: 9px;
+    position: relative;
+    left: -6px;
+    top: -4px;
+    background-image: url(ux/images/colorpick/pickerslider.png);
+    background-repeat: no-repeat;
+    z-index: 1
+}
+
+.x-colorpicker-hue {
+    background-image: url(ux/images/colorpick/huegradient.png)
+}
+
+.x-colorpicker-hue-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.x-colorpicker-saturation .x-colorpicker-draghandle-container {
+    background: -moz-linear-gradient(top, #fff 0%, #000 100%);
+    background: -webkit-linear-gradient(top, #fff 0%, #000 100%);
+    background: -o-linear-gradient(top, #fff 0%, #000 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #000 100%);
+    background: linear-gradient(to bottom, #fff 0%, #000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0)
+}
+
+.x-colorpicker-value .x-colorpicker-draghandle-container {
+    background: -moz-linear-gradient(top, red 0%, #000 100%);
+    background: -webkit-linear-gradient(top, red 0%, #000 100%);
+    background: -o-linear-gradient(top, red 0%, #000 100%);
+    background: -ms-linear-gradient(top, red 0%, #000 100%);
+    background: linear-gradient(to bottom, red 0%, #000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#000000', GradientType=0)
+}
+
+.x-colorpicker-alpha .x-colorpicker-draghandle-container {
+    background-image: url(ux/images/colorpick/checkerboard.png)
+}
+
+.x-colorpicker-preview {
+    background-image: url(ux/images/colorpick/checkerboard.png)
+}
+
+.x-colorpicker-button {
+    position: relative;
+    border: 1px solid gray;
+    background-image: url(ux/images/colorpick/checkerboard.png)
+}
+
+.x-colorpicker-field .x-form-item-body {
+    position: relative
+}
+
+.x-colorpicker-field input {
+    padding-left: 26px
+}
+
+.x-colorpicker-field-swatch {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    background-image: url(ux/images/colorpick/checkerboard.png);
+    top: 0px;
+    bottom: 0px;
+    margin: auto
+}
+
+.x-colorpicker-field-swatch-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+
+/**灰色头部**/
+.my-header {
+}
+
+.my-header .x-panel-header-default {
+    background-color: #f5f5f5 !important;
+}
+
+.my-header .x-panel-header-title-default {
+    color: #333333 !important;
+}
+
+.center-text {
+}
+
+.center-text .x-autocontainer-innerCt {
+    vertical-align: middle !important;
+    text-align: center !important;
+    font-size: 18px;
+    color: #999999
+}
+
+/**表格头部的底线**/
+.table-cell-middle {
+}
+
+.table-cell-middle .x-grid-td {
+    vertical-align: middle !important;
+}
+
+.grid-simple-line {
+}
+
+/*.grid-simple-line .x-column-header { border-right: 0px !important; }*/
+.grid-simple-line .x-grid-body {
+    border-top-width: 1px !important;
+}
+
+/****************************data view css start****************************************/
+.images_view .x-panel-body {
+    background: none repeat scroll 0 0 white;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+
+.images_view .thumb {
+    background: none repeat scroll 0 0 #ffffff;
+    padding: 3px 3px 0;
+    height: 66px;
+    width: 86px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.x-quirks .images_view .thumb {
+    padding-bottom: 3px;
+}
+
+.images_view .thumb img {
+    max-height: 60px;
+    max-width: 80px;
+}
+
+.images_view .thumb-wrap {
+    float: left;
+    margin: 4px 0 4px 4px;
+    padding: 5px;
+}
+
+.images_view .thumb-wrap span {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 86px;
+}
+
+.images_view .x-item-over {
+    background: /*url("../images/over.gif")*/ repeat-x scroll left top #EFEFEF;
+    border: 1px solid #DDDDDD;
+    padding: 4px;
+}
+
+.images_view .x-item-selected {
+    background: /*url("../images/selected.gif")*/ no-repeat scroll right bottom #EFF5FB;
+    border: 1px solid #99BBE8;
+    padding: 4px;
+}
+
+.images_view .x-item-selected .thumb {
+    background: none repeat scroll 0 0 transparent;
+}
+
+.images_view .loading-indicator {
+    background-image: url("../../resources/themes/images/default/grid/loading.gif");
+    background-position: left center;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    margin: 10px;
+    padding-left: 20px;
+}
+
+.x-view-selector {
+    background-color: #C3DAF9;
+    border: 1px dotted #3399BB;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+.ext-strict .ext-ie .x-tree .x-panel-bwrap {
+    overflow: hidden;
+    position: relative;
+}
+
+/****************************data view css end****************************************/
+
+/*** Extend.image.ImageGroupViewer **/
+.preview {
+    float: left;
+    padding-bottom: 15px;
+    display: inline;
+    position: relative;
+}
+
+.spec-n1 {
+    margin: 14px 0 14px 14px;
+}
+
+.jqzoom {
+    position: relative;
+    padding: 0;
+}
+
+.preview img {
+    vertical-align: middle;
+}
+
+.spec-list {
+    position: relative;
+    height: 54px;
+    overflow: hidden;
+    padding: 0 20px 0 34px;
+}
+
+.spec-control {
+    background-image: url(../image/exicon/inpn.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.spec-controlr {
+    background-image: url(../image/exicon/inpny.png);
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.spec-list .spec-control, .spec-controlr {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 17px;
+    height: 54px;
+}
+
+.spec-forward {
+    left: 14px;
+    background-position: -34px 0px;
+}
+
+.preview ol, ul {
+    list-style: none;
+}
+
+.spec-list .spec-items img.img-hover {
+    border: 2px solid #e4393c;
+    padding: 0;
+}
+
+.spec-backward {
+    right: 0;
+    background-position: -51px 0px
+}
+
+.spec-list .spec-items {
+    position: absolute;
+    top: 0px;
+    left: 36px;
+    z-index: 0;
+}
+
+.preview .lh {
+    overflow: hidden;
+    padding: 0px;
+    zoom: 1;
+}
+
+.spec-list .spec-items li {
+    width: 62px;
+    text-align: center;
+    font-size: 0;
+    position: relative;
+}
+
+.preview .lh li {
+    float: left;
+}
+
+.preview .lhr {
+    overflow: hidden;
+    padding: 0px;
+    zoom: 1;
+}
+
+.spec-list .spec-items img {
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+}
+
+/************DashboardView.js*************/
+.shadow {
+    -webkit-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 20px 20px 0;
+    float: left;
+}
+
+.info-card-item-ctn {
+    padding: 35px 10px;
+}
+
+.info-card-item {
+    text-align: center;
+    line-height: 24px;
+    color: #404040;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+}
+
+.x-fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.x-fa:before {
+    font-family: FontAwesome !important;
+}
+
+.fa-shopping-cart:before {
+    content: "\f07a" !important;
+}
+
+.fa-envelope:before {
+    content: "\f0e0" !important;
+}
+
+.fa-code:before {
+    content: "\f121" !important;
+}
+
+/**/
+.fa-area-chart:before {
+    content: "\f1fe" !important;
+}
+
+.fa-pie-chart:before {
+    content: "\f200" !important;
+}
+
+.fa-dot-circle-o:before {
+    content: "\f192" !important;
+}
+
+.fa-bar-chart-o:before, .fa-bar-chart:before {
+    content: "\f080" !important;
+}
+
+.fa-wifi:before {
+    content: "\f1eb" !important;
+}
+
+.info-card-item h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    margin: 0;
+    line-height: 32px;
+}
+
+.info-card-item span {
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.bg-color-white {
+    background-color: #ffffff;
+}
+
+/********************************订单收货地址列表***********************************/
+.rbb_parent {
+    font-size: 12px;
+    font-family: tahoma, arial, "\5FAE\8F6F\96C5\9ED1", sans-serif;
+    width: 100%;
+    overflow: hidden;
+}
+
+.receive_box {
+    position: relative;
+    color: #666666;
+    width: 237px;
+    height: 106px;
+    padding: 5px;
+    float: left;
+    margin: 5px;
+}
+
+.rb_sel {
+    background: url("../image/exicon/receive_sel.png") no-repeat;
+}
+
+.rb_unsel {
+    background: url("../image/exicon/receive_unsel.png") no-repeat;
+}
+
+.receive_w {
+    width: 88%;
+}
+
+.receive_people {
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 5px 0px 5px;
+    margin-left: 15px;
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.receive_people span {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.receive_people .city {
+    font-weight: 900;
+}
+
+.receive_addr {
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.receive_addr span {
+    margin-right: 3px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.addr-toolbar {
+    margin-left: 15px;
+}
+
+.empty_txt {
+    color: #999999;
+    font-size: 12px;
+    font-family: tahoma, arial, "\5FAE\8F6F\96C5\9ED1", sans-serif;
+    margin: 10px auto 10px 5px;
+}
+
+.addr_tb_add {
+    font-size: 12px;
+    font-family: tahoma, arial, "\5FAE\8F6F\96C5\9ED1", sans-serif;
+    margin-left: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.addr-toolbar a, .addr_tb_add a {
+    color: #cc9977;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.a-link {
+    color: #cc9977;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.curmarker {
+    z-index: 3;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 77px;
+    right: 11px;
+}
+
+.rb_ins {
+    background: url(../image/exicon/receive_pic.png) no-repeat;
+    background-position: 0 -272px;
+}
+
+.deftip {
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    padding: 0 2px;
+    text-decoration: none;
+    display: none;
+    filter: alpha(opacity=70);
+    opacity: .7;
+    z-index: 3;
+    background: #ccc;
+    color: #fff;
+}
+
+/********************************订单商品***********************************/
+.goods-list {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    width: 616px;
+    background-color: #f3fbfe;
+    padding: 10px 0 0 15px;
+}
+
+.goods-list table {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+}
+
+.goods-list td {
+    vertical-align: top;
+    color: #666;
+}
+
+.goods-list th {
+    text-align: left;
+}
+
+.goods-logo {
+    width: 80px;
+}
+
+.goods-name {
+    width: 240px;
+}
+
+.goods-code {
+    width: 100px;
+}
+
+.goods-price {
+    width: 100px;
+}
+
+.goods-amt {
+    width: 70px;
+}
+
+.gd-title {
+    line-height: 24px;
+    color: #666;
+}
+
+.gd-hd {
+    color: #999999;
+    display: none;
+}
+
+.goods-list .p-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.goods-list a {
+    color: #666;
+    text-decoration: none;
+}
+
+.goods-list .p-img img {
+    width: 80px;
+    height: 80px;
+}
+
+.goods-list .p-name {
+    float: left;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.goods-list .p-price {
+    float: left;
+    margin: 0 0 5px;
+}
+
+.goods-list .p-price strong {
+    font-family: verdana;
+    color: #e4393c;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.goods-list .sales-icon {
+    display: inline-block;
+    background: #e4393c;
+    color: #fff;
+    vertical-align: middle;
+    padding: 0 7px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.amt-txt {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.goods-amt input {
+    border: 1px solid #aaaaaa;
+    width: 50px;
+    border-radius: 3px;
+    text-align: center;
+    display: none;
+}
+
+.goods-code span {
+    color: #aaaaaa;
+}
+
+/*金额*/
+.fc-price-info {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+    margin-right: 10px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.fc-price-tit {
+    color: #666;
+    float: right;
+}
+
+.fc-price-num {
+    color: #e4393c;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 18px;
+    min-width: 122px;
+    _width: 122px;
+    float: right;
+    text-align: right;
+}
+
+.fc-price-other {
+    color: #333;
+    float: right;
+    _width: 122px;
+    min-width: 122px;
+    text-align: right;
+    font-family: verdana;
+}
+
+/********************************订单支付方式***********************************/
+.pay_box {
+    position: relative;
+    color: #333333;
+    font-size: 12px;
+    font-family: tahoma, arial, "\5FAE\8F6F\96C5\9ED1", sans-serif;
+    /*width: 92px;*/
+    padding-right: 4px;
+    padding-left: 4px;
+    height: 31px;
+    line-height: 28px;
+    text-align: center;
+    margin: 5px;
+    border: 2px solid #ddd;
+    float: left;
+    cursor: pointer;
+}
+
+.pb_sel {
+    border: 2px solid #e4393c;
+}
+
+.pb_sel ins {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 16px;
+    right: 0px;
+    background: url("../image/exicon/selected-icon.png") no-repeat;
+}
+
+/********************************其他CSS样式***********************************/
+
+.basetitle {
+    border-bottom: 1px solid #C3DAF9;
+    height: 20px;
+    margin: 0px 6px 10px 0px;
+    padding: 0;
+}
+
+.basetitle .img {
+    float: left;
+    margin-right: 4px;
+    margin-top: -1px;
+}
+
+.basetitle .text {
+    color: #19438B;
+    float: left;
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.search-close {
+    border-width: 1px 1px 1px 0px;
+    border: 1px solid #EAEAEA;
+    border-left: 0px;
+    background-color: #F0F0F0
+}
+
+.search-close:hover {
+    background-color: #E0E0E0 !important;
+    border-width: 1px 1px 1px 0px;
+    border: 1px solid #EAEAEA !important;
+    border-left: 0px;
+}
+
+.system-message {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.system-message .x-tip-anchor-top {
+    border-bottom: 10px solid #eaedf1;
+}
+
+.system-message .x-tip-header-default {
+    padding: 0px;
+    height: 40px;
+    background-color: #eaedf1;
+}
+
+.system-message .x-tool-close {
+    background-color: #eaedf1;
+    background-image: none;
+    color: #999999;
+    padding-right: 20px;
+    position: absolute;
+    right: -10px;
+}
+
+.system-message .x-tip-header-default .x-title-text {
+    height: 40px;
+    line-height: 40px;
+    color: #333333;
+    font-weight: 100;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.system-message .x-tip-body-default {
+    padding: 0px;
+}
+
+.system-message-box {
+    width: 100%;
+}
+
+.system-message-item {
+    border-bottom: 1px solid #eaedf1;
+    height: 50px;
+    color: #333333;
+    padding: 6px;
+    overflow: hidden;
+}
+
+.sm-hover:hover {
+    background-color: #F9F9F9;
+}
+
+.system-message-item .sm-title {
+    width: 100%;
+    overflow: hidden;
+    color: #0f74a8;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.system-message-item .sm-content {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.system-message-box .more-text {
+    line-height: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    border-bottom: 0px;
+}
+
+.system-message-box .none-text {
+    line-height: 100px;
+    height: 100px;
+    font-size: 15px;
+    color: #E0E0E0;
+    text-align: center;
+    border-bottom: 0px;
+}
+
+.form-detail {
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #EEEEEE;
+    margin: 20px 0px 10px 20px;
+}
+
+.form-detail .fd-title {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px dotted #BBBBBB;
+}
+
+.form-detail .fd-title span {
+    font-size: 15px;
+    margin-left: 20px;
+    line-height: 50px;
+    color: #666666;
+}
+
+.form-detail .fd-body {
+    width: 100%;
+    padding: 10px 20px 20px 20px;
+}
+
+.form-detail .fd-item {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    font-size: 14px;
+    margin: 10px auto;
+    color: #000000;
+}
+
+.form-detail .fd-item-left {
+    width: 40%;
+    float: left;
+}
+
+.form-detail .fd-item-right {
+    width: 60%;
+    float: right;
+    color: #000000
+}
+
+.pop-number {
+    display: block;
+    float: right;
+    position: absolute;
+    min-width: 19px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 19px;
+    padding: 1px 3px 1px 2px;
+    background-color: #f90;
+    font-size: 12px;
+    top: 5px;
+    margin-left: 20px;
+}
+
+.main-toolbar-btn-item:hover {
+    background-color: rgb(48, 90, 125);
+}
+
+.toast-remove-border .x-autocontainer-innerCt {
+    padding: 0px !important;
+}
+
+/*修改radio的auto布局时间距过大的css*/
+.x-form-cb-wrap-order-default {
+    height: 0px;
+}
+
+.x-form-cb-wrap-order {
+    vertical-align: top;
+}
+
+/******颜色表******/
+.red {
+    color: #dd6550 !important
+}
+
+.green {
+    color: #81cb31 !important
+}
+
+.yellow {
+    color: #ffc839 !important
+}
+
+.gray {
+    color: #999999 !important
+}
+
+.blue {
+    color: dodgerblue !important
+}
+
+.COLOR_DE8100 {
+    color: #DE8100 !important
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <sql id="getJoinWhere">
+        <if test="integralStart!=null or integralEnd!=null">
+            inner join t_integral t2 on t2.user_id=t1.id
+            <if test="integralStart!=null">and t2.amount&gt;=#{integralStart}</if>
+            <if test="integralStart!=null">and t2.amount&lt;=#{integralEnd}</if>
+        </if>
+    </sql>
+    <sql id="getSearchWhere">
+        <if test="userName!=null">
+            and t1.user_name=#{userName}
+        </if>
+        <if test="openid!=null">
+            and t1.openid=#{openid}
+        </if>
+        <if test="nick!=null">
+            and t1.nick like #{nick} escape '/'
+        </if>
+    </sql>
+    <select id="getSearchIds">
+        select t1.id from t_user t1
+        <include refid="getJoinWhere"/>
+        where 1=1
+        <include refid="getSearchWhere"/>
+        <if test="start>=0 and limit>0">
+            limit #{start},#{limit}
+        </if>
+    </select>
+    <select id="getSearchCount">
+        select count(t1.id) from t_user t1
+        <include refid="getJoinWhere"/>
+        where 1=1
+        <include refid="getSearchWhere"/>
+    </select>
+</mapper>

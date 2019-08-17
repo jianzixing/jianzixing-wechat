@@ -1,0 +1,295 @@
+body {
+    background-color: #f6f6f6;
+}
+
+.react-root {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.react-root .react-view {
+    position: relative;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+.homePageBody {
+    overflow: hidden;
+    overflow-y: auto;
+    flex: 1 1 0%;
+    position: relative;
+}
+
+.react-root .goods {
+    padding-top: 25px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.goods .gt {
+    flex-direction: row;
+    align-items: center;
+}
+
+.goods .gt .img img {
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.goods .gtn {
+    height: 60px;
+    width: 245px;
+    justify-content: space-between;
+}
+
+.goods .gtn span {
+    display: -webkit-box;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 34px;
+    white-space: normal;
+}
+
+.goods .gtn .amount {
+    flex: 1 1 0%;
+    flex-direction: row;
+    margin-top: 13px;
+}
+
+.goods .gtn .gtda {
+    display: inline-block;
+    margin: 0px 10px 0px 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: JDZhengHT-Regular;
+    line-height: 14px;
+}
+
+.goods .gtn .gtda_label {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.goods .gtn .ba {
+    margin-left: 15px;
+}
+
+
+.goods .edit_amount {
+    height: 53px;
+    width: 330px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px 0px 0px;
+    border-color: rgb(238, 238, 238) black black;
+    padding: 1px;
+    margin-top: 19px;
+}
+
+.goods .edit_amount .ea_label {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #333333;
+}
+
+.goods .edit_amount .edit_tool {
+    flex-direction: row;
+    height: 25px;
+    width: 95px;
+    align-items: center;
+}
+
+.goods .edit_amount .edit_tool .sub {
+    background-color: transparent;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 25px;
+}
+
+.goods .edit_amount .edit_tool .sub .icon {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background-image: url(../../images/icons/math_subtraction.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}
+.goods .edit_amount .edit_tool .sub.dark .icon {
+    background-image: url(../../images/icons/math_subtraction_dark.png);
+}
+
+.goods .edit_amount .edit_tool .input {
+    flex: 1 1 0%;
+    align-self: stretch;
+}
+.goods .edit_amount .edit_tool .input input {
+    background-color: rgb(246, 246, 246);
+    border-color: black;
+    border-width: 0px;
+    box-sizing: border-box;
+    color: rgb(35, 35, 38);
+    font-style: inherit;
+    font-variant: inherit;
+    font-weight: bold;
+    font-stretch: inherit;
+    font-size: 15px;
+    line-height: inherit;
+    font-family: inherit;
+    padding: 4px;
+    height: 30px;
+    width: 50px;
+    align-self: stretch;
+    text-align: center;
+}
+.goods .edit_amount .edit_tool .add {
+    background-color: transparent;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 25px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.goods .edit_amount .edit_tool .add .icon {
+    width: 12px;
+    height: 12px;
+    background-image: url(../../images/icons/math_add.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}
+
+.goods .edit_amount .edit_tool .add.dark .icon {
+    background-image: url(../../images/icons/math_add_dark.png);
+}
+
+.react-root .as_type {
+    flex: 1 1 0%;
+    margin: 20px 0px;
+    background-color: rgb(255, 255, 255);
+}
+.as_type .item {
+    height: 82px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 22px;
+}
+.as_type .item .name {
+    flex-direction: row;
+    align-items: center;
+}
+
+.as_type .item .name .img img {
+    width: 27px;
+    height: 27px;
+    margin-right: 11px;
+}
+
+.as_type .item .name .text {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #333333;
+}
+
+.as_type .item .detail {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 0%;
+    padding-left: 11px;
+}
+
+.as_type .item .detail_span {
+    display: inline-block;
+    margin: 0px 11px 0px 0px;
+    padding: 0px;
+    text-align: right;
+    color: rgb(132, 132, 132);
+    font-size: 11px;
+    justify-content: flex-end;
+    line-height: 13.2px;
+}
+
+.as_type .item .detail .icon {
+    height: 11px;
+    width: 5px;
+    background-image: url(../../images/icons/arrow-next.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}
+
+.as_type .split {
+    margin-left: 16px;
+    margin-right: 16px;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    border-color: black black rgb(238, 238, 238);
+}
+
+.disable_mask {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 75px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1000;
+}
+.disable_mask.show {
+    display: none;
+}

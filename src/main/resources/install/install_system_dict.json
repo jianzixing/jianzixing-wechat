@@ -1,0 +1,631 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableSystemDict",
+  "initPrimaryKey": 200000,
+  "primaryKey": "id",
+  "items": [
+    {
+      "id": 1,
+      "dictType": 1,
+      "table": "TableClientUser",
+      "field": "nature",
+      "value": 10,
+      "name": "国有企业"
+    },
+    {
+      "id": 2,
+      "dictType": 1,
+      "table": "TableClientUser",
+      "field": "nature",
+      "value": 20,
+      "name": "中外合资"
+    },
+    {
+      "id": 3,
+      "dictType": 1,
+      "table": "TableClientUser",
+      "field": "nature",
+      "value": 30,
+      "name": "私营或个体户"
+    },
+    {
+      "id": 4,
+      "dictType": 1,
+      "table": "TableClientUser",
+      "field": "nature",
+      "value": 40,
+      "name": "合伙企业"
+    },
+    {
+      "id": 5,
+      "dictType": 1,
+      "table": "TableClientUser",
+      "field": "nature",
+      "value": 50,
+      "name": "外商独资"
+    },
+    {
+      "id": 6,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 10,
+      "name": "官方网站"
+    },
+    {
+      "id": 7,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 20,
+      "name": "网站广告"
+    },
+    {
+      "id": 8,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 30,
+      "name": "展览会"
+    },
+    {
+      "id": 9,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 40,
+      "name": "客户推荐"
+    },
+    {
+      "id": 10,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 50,
+      "name": "电话"
+    },
+    {
+      "id": 11,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 60,
+      "name": "邮件"
+    },
+    {
+      "id": 12,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 70,
+      "name": "报刊广告"
+    },
+    {
+      "id": 13,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 80,
+      "name": "黄页"
+    },
+    {
+      "id": 14,
+      "dictType": 2,
+      "table": "TableClientUser",
+      "field": "source",
+      "value": 90,
+      "name": "朋友介绍"
+    },
+    {
+      "id": 15,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 10,
+      "name": "潜在终端客户"
+    },
+    {
+      "id": 16,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 20,
+      "name": "潜在代理"
+    },
+    {
+      "id": 17,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 30,
+      "name": "现有终端客户"
+    },
+    {
+      "id": 18,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 40,
+      "name": "现有代理"
+    },
+    {
+      "id": 19,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 50,
+      "name": "流失终端客户"
+    },
+    {
+      "id": 20,
+      "dictType": 3,
+      "table": "TableClientUser",
+      "field": "category",
+      "value": 60,
+      "name": "流失代理"
+    },
+    {
+      "id": 21,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 10,
+      "name": "保险业"
+    },
+    {
+      "id": 22,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 20,
+      "name": "采矿"
+    },
+    {
+      "id": 23,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 30,
+      "name": "能源"
+    },
+    {
+      "id": 24,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 40,
+      "name": "餐饮"
+    },
+    {
+      "id": 25,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 50,
+      "name": "宾馆"
+    },
+    {
+      "id": 26,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 60,
+      "name": "电讯业"
+    },
+    {
+      "id": 27,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 70,
+      "name": "房地产"
+    },
+    {
+      "id": 28,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 80,
+      "name": "服务"
+    },
+    {
+      "id": 29,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 90,
+      "name": "服装业"
+    },
+    {
+      "id": 30,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 100,
+      "name": "公益组织"
+    },
+    {
+      "id": 31,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 110,
+      "name": "广告业"
+    },
+    {
+      "id": 32,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 120,
+      "name": "航空航天"
+    },
+    {
+      "id": 33,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 130,
+      "name": "化学"
+    },
+    {
+      "id": 34,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 140,
+      "name": "健康"
+    },
+    {
+      "id": 35,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 150,
+      "name": "保健"
+    },
+    {
+      "id": 36,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 160,
+      "name": "建筑业"
+    },
+    {
+      "id": 37,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 170,
+      "name": "教育"
+    },
+    {
+      "id": 38,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 180,
+      "name": "培训"
+    },
+    {
+      "id": 39,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 190,
+      "name": "计算机"
+    },
+    {
+      "id": 40,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 200,
+      "name": "金属冶炼"
+    },
+    {
+      "id": 41,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 210,
+      "name": "警察"
+    },
+    {
+      "id": 42,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 220,
+      "name": "消防"
+    },
+    {
+      "id": 43,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 230,
+      "name": "军人"
+    },
+    {
+      "id": 44,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 240,
+      "name": "会计"
+    },
+    {
+      "id": 45,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 250,
+      "name": "美容"
+    },
+    {
+      "id": 46,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 260,
+      "name": "媒体"
+    },
+    {
+      "id": 47,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 270,
+      "name": "出版"
+    },
+    {
+      "id": 48,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 280,
+      "name": "木材"
+    },
+    {
+      "id": 49,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 290,
+      "name": "造纸"
+    },
+    {
+      "id": 50,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 300,
+      "name": "零售"
+    },
+    {
+      "id": 51,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 310,
+      "name": "批发"
+    },
+    {
+      "id": 52,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 320,
+      "name": "农业"
+    },
+    {
+      "id": 53,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 330,
+      "name": "旅游业"
+    },
+    {
+      "id": 54,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 340,
+      "name": "司法"
+    },
+    {
+      "id": 55,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 350,
+      "name": "律师"
+    },
+    {
+      "id": 56,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 360,
+      "name": "司机"
+    },
+    {
+      "id": 57,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 370,
+      "name": "体育运动"
+    },
+    {
+      "id": 58,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 380,
+      "name": "学术研究"
+    },
+    {
+      "id": 59,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 390,
+      "name": "演艺"
+    },
+    {
+      "id": 60,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 400,
+      "name": "医疗服务"
+    },
+    {
+      "id": 61,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 410,
+      "name": "艺术"
+    },
+    {
+      "id": 62,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 420,
+      "name": "设计"
+    },
+    {
+      "id": 63,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 430,
+      "name": "银行"
+    },
+    {
+      "id": 64,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 440,
+      "name": "金融"
+    },
+    {
+      "id": 65,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 450,
+      "name": "因特网"
+    },
+    {
+      "id": 66,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 460,
+      "name": "音乐舞蹈"
+    },
+    {
+      "id": 67,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 470,
+      "name": "邮政快递"
+    },
+    {
+      "id": 68,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 480,
+      "name": "运输业"
+    },
+    {
+      "id": 69,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 490,
+      "name": "政府机关"
+    },
+    {
+      "id": 70,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 500,
+      "name": "机械制造"
+    },
+    {
+      "id": 71,
+      "dictType": 4,
+      "table": "TableClientUser",
+      "field": "tmt",
+      "value": 510,
+      "name": "咨询"
+    },
+    {
+      "id": 100,
+      "dictType": 5,
+      "table": "TableSystemMessage",
+      "field": "type",
+      "value": 0,
+      "name": "默认消息"
+    },
+    {
+      "id": 101,
+      "dictType": 5,
+      "table": "TableSystemMessage",
+      "field": "type",
+      "value": 0,
+      "name": "通知消息"
+    },
+    {
+      "id": 102,
+      "dictType": 5,
+      "table": "TableSystemMessage",
+      "field": "type",
+      "value": 0,
+      "name": "系统消息"
+    },
+    {
+      "id": 201,
+      "dictType": 6,
+      "table": "TableWeChatAccount",
+      "field": "type",
+      "value": 10,
+      "name": "普通订阅号"
+    },
+    {
+      "id": 202,
+      "dictType": 6,
+      "table": "TableWeChatAccount",
+      "field": "type",
+      "value": 20,
+      "name": "普通服务号"
+    },
+    {
+      "id": 203,
+      "dictType": 6,
+      "table": "TableWeChatAccount",
+      "field": "type",
+      "value": 30,
+      "name": "认证订阅号"
+    },
+    {
+      "id": 204,
+      "dictType": 6,
+      "table": "TableWeChatAccount",
+      "field": "type",
+      "value": 40,
+      "name": "认证服务号/认证媒体/政府订阅号"
+    }
+  ]
+}

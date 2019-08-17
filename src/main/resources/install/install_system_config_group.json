@@ -1,0 +1,30 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableSystemConfigGroup",
+  "items": [
+    {
+      "id": 1,
+      "name": "网站信息配置",
+      "isSystem": 1
+    },
+    {
+      "id": 2,
+      "name": "积分信息配置",
+      "isSystem": 1
+    },
+    {
+      "id": 3,
+      "name": "订单信息配置",
+      "isSystem": 1
+    },
+    {
+      "id": 4,
+      "name": "售后信息配置",
+      "isSystem": 1
+    },
+    {
+      "id": 100,
+      "name": "其他信息配置",
+      "isSystem": 1
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableRobots",
+  "items": [
+    {
+      "id": 1,
+      "cmd": "User-agent",
+      "value": "*"
+    },
+    {
+      "id": 2,
+      "cmd": "Disallow",
+      "value": "/admin"
+    }
+  ]
+}

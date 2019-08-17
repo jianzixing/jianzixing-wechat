@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>摇一摇</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="e1" style="width: 100%;overflow: hidden"></div>
+<div id="e2" style="width: 100%;overflow: hidden"></div>
+<div id="e3" style="width: 100%;overflow: hidden"></div>
+
+<div id="app" class="bg">
+
+</div>
+<script type="text/javascript">
+    var color = new Array('#fff', '#ff0', '#f00', '#888', '#60f', '#0ff');
+    if (window.DeviceMotionEvent) {
+        var speed = 12;
+        var lastX, lastY, lastZ, x, y, z;
+        var x = y = z = lastX = lastY = lastZ = 0;
+        var start = 0;
+        var count = 1;
+        var handlers = [];
+        var time = (new Date()).getTime();
+
+        var maxx = 0, maxy = 0, maxz = 0;
+
+        window.addEventListener('devicemotion', function () {
+            var acceleration = event.accelerationIncludingGravity;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            // var div = document.createElement("div");
+            // div.innerHTML = "x:" + x + "&nbsp;,&nbsp;" + "y:" + y + "&nbsp;,&nbsp;" + "z:" + z + "&nbsp;,&nbsp;x-x:"
+            //     + (x - lastX) + "&nbsp;,&nbsp;y-y:" + (y - lastY) + "&nbsp;,&nbsp;z-z" + (z - lastZ);
+            // div.style.width = '100%';
+            // div.style.overflow = 'hidden';
+            //
+            // document.body.appendChild(div);
+            if (lastX == null && lastY == null && lastZ == null) {
+                return;
+            }
+
+            var div = document.createElement("div");
+            div.innerHTML = "x:" + Math.abs(x - lastX) + ",y:" + Math.abs(y - lastY);
+            div.style.width = '100%';
+            div.style.overflow = 'hidden';
+            document.getElementById("e1").innerHTML = "";
+            document.getElementById("e1").appendChild(div);
+
+            var absx = Math.abs(lastX - x);
+            var absy = Math.abs(lastY - y);
+            var absz = Math.abs(lastZ - z);
+
+            if (maxx < absx) maxx = Math.floor(absx);
+            if (maxy < absy) maxy = Math.floor(absy);
+            if (maxz < absz) maxz = Math.floor(absz);
+            var div = document.createElement("div");
+            div.style.width = '100%';
+            div.style.overflow = 'hidden';
+            div.innerHTML = "max:" + maxx + "," + maxy + "," + maxz;
+            document.getElementById("e1").appendChild(div);
+
+            if ((absx > speed && absy > speed)
+                    || (absx > speed && absz > speed)
+                    || (absy > speed && absz > speed)) {
+                start++;
+                if (start > 10) start = 10;
+                var div = document.createElement("div");
+                div.style.width = '100%';
+                div.style.overflow = 'hidden';
+                var ct = (new Date()).getTime();
+                div.innerHTML = "start " + start + ",time=" + (ct - time) + "ms";
+                time = (new Date()).getTime();
+                document.getElementById("e3").appendChild(div);
+                for (var i in handlers) {
+                    clearTimeout(handlers[i]);
+                    handlers = [];
+                }
+            }
+
+            if (start >= 1 && Math.abs(x - lastX) <= 1 && Math.abs(y - lastY) <= 1) {
+                var handler = setTimeout(function () {
+                    document.body.style.backgroundColor = color[Math.round(Math.random() * 10) % 6];
+                    var div = document.createElement("div");
+                    div.style.width = '100%';
+                    div.style.overflow = 'hidden';
+                    div.innerHTML = "once" + count;
+                    document.getElementById("e2").appendChild(div);
+                    count++;
+                }, 1000);
+
+                start = 0;
+                handlers.push(handler);
+            }
+            lastX = x;
+            lastY = y;
+        }, false);
+    }
+</script>
+</body>
+</html>

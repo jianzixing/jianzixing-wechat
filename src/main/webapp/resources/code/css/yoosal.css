@@ -1,0 +1,328 @@
+.yoosal_box {
+    width: 260px;
+    height: 42px;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+    cursor: pointer
+}
+.yoosal_box:hover {
+    background-image: linear-gradient(180deg, #f3f3f3 0%, #ffffff 100%);
+}
+.yoosal_box:hover .yoosal_bubble {
+    display: block;
+}
+.yoosal_indicator {
+    float: left;
+    width: 42px;
+    height: 42px;
+}
+.yoosal_text {
+    float: left;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666666;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 3px;
+    font-family: 'PingFangSC-Regular', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti', 'WenQuanYi Micro Hei', SimSun, sans-serif;
+}
+.yoosal_logo {
+    float: right;
+    width: 42px
+}
+@keyframes bubble {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.7, 0.7);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+.yoosal_bubble {
+    position: absolute;
+    display: none;
+    animation: bubble 1.5s infinite ease;
+    box-shadow: inset 0 0 0 1px #2488FF;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    margin-left: 6px;
+    background-color: #7DB4FF;
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0) 50%, #c5daf9 50%), linear-gradient(65deg, #c5daf9 50%, rgba(0, 0, 0, 0) 50%);
+}
+.yoosal_point {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: #2488FF;
+    border-radius: 10px;
+    left: 16px;
+    top: -26px;
+}
+.yoosal_bubble_container {
+    width: 42px;
+    height: 42px;
+}
+.yoosal_logo img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.yoosal_wait {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9px;
+}
+.yoosal_dialog {
+    position: absolute;
+    box-shadow: 0 0 10px #cccccc;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    display: none;
+    cursor: default;
+    user-select: none;
+    z-index: 9999;
+}
+.yoosal_aimg {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    left: 10px;
+    background-position: 0 0;
+}
+.yoosal_fail {
+    position: absolute;
+    height: 0px;
+    width: 330px;
+    left: 10px;
+    z-index: 10;
+    bottom: 58px;
+    background: #de715b;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 28px;
+    transition: all .3s ease;
+    overflow: hidden;
+    display: block;
+}
+.yoosal_fail span {
+    margin-left: 10px;
+}
+.yoosal_arrow_in {
+    position: absolute;
+    border: 7px solid #fff;
+    margin: 204px 0 1px -14px;
+    border-color: transparent #fff transparent transparent;
+}
+.yoosal_arrow_out {
+    position: absolute;
+    border: 8px solid #cccccc;
+    margin: 203px 0 1px -17px;
+    border-color: transparent #cccccc transparent transparent;
+}
+.yoosal_hide {
+    display: none;
+}
+.yoosal_ahead {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+}
+.yoosal_ahead_text {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 10px;
+    float: left;
+}
+.yoosal_ahead_image {
+    width: 116px;
+    height: 40px;
+    display: block;
+    float: left;
+    margin-top: 6px;
+    background-position: 0 -330px;
+}
+.yoosal_abottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 58px;
+    z-index: 20;
+}
+.yoosal_abottom_btns {
+    height: 23px;
+    margin-top: 18px;
+    margin-left: 10px;
+    overflow: hidden;
+    float: left;
+}
+.yoosal_abottom_btn {
+    width: 23px;
+    height: 23px;
+    display: block;
+    float: left;
+    margin-right: 14px;
+    cursor: pointer;
+}
+.yoosal_abottom_btn1 {
+    background: url("../images/1.png") 0 -189px;
+}
+.yoosal_abottom_btn2 {
+    background: url("../images/1.png") 0 -247px;
+}
+.yoosal_abottom_btn3 {
+    background: url("../images/1.png") 0 -354px;
+}
+.yoosal_ok {
+    display: block;
+    border-radius: 2px;
+    background-color: #539ffe;
+    text-decoration: none;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    margin-top: 9px;
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+}
+.yoosal_ok span {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+.yoosal_number {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #249be2;
+    box-shadow: 0 0 10px black;
+    transition: all .3s ease;
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    overflow: hidden;
+    opacity: 0;
+}
+.yoosal_number.yoosal_number_anim {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+}
+.yoosal_number div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+@-webkit-keyframes object_one {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+@keyframes object_one {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+@-webkit-keyframes object_two {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+@keyframes object_two {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+@-webkit-keyframes object_three {
+    75% {
+        -webkit-transform: scale(0);
+    }
+}
+@keyframes object_three {
+    75% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+}
+.yoosal_wait_button_l {
+    margin-left: 38px
+}
+.yoosal_wait_button {
+    position: absolute;
+    border-radius: 2px;
+    background-color: #539ffe;
+    text-decoration: none;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+}
+.yoosal_wait_button_css {
+    width: 8px;
+    height: 8px;
+    background-color: #FFF;
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+}
+.yoosal_wait_button_one {
+    -webkit-animation: object_one 1.5s infinite;
+    animation: object_one 1.5s infinite;
+}
+.yoosal_wait_button_two {
+    -webkit-animation: object_two 1.5s infinite;
+    animation: object_two 1.5s infinite;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+}
+.yoosal_wait_button_three {
+    -webkit-animation: object_three 1.5s infinite;
+    animation: object_three 1.5s infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}

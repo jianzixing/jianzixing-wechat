@@ -1,0 +1,686 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 5,
+      "pid": 0,
+      "module": "shop",
+      "linkModule": "shop",
+      "text": "商城",
+      "type": "normal",
+      "tabIcon": "image/jeticon/shop.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 3
+    },
+    {
+      "id": 50,
+      "pid": 5,
+      "module": "",
+      "linkModule": "shop",
+      "text": "商品管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 5001,
+      "pid": 50,
+      "module": "App.goods.GoodsGroupManager",
+      "linkModule": "shop",
+      "text": "商品分类管理",
+      "type": "normal",
+      "tabIcon": "image/micon/classify.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "GoodsGroup": [
+          "getGoodsGroups",
+          "deleteGoodsGroups",
+          "addGoodsGroup",
+          "updateGoodsGroup"
+        ],
+        "GoodsParameter": [
+          "getGroups"
+        ],
+        "Support": [
+          "getSupports"
+        ]
+      }
+    },
+    {
+      "id": 5002,
+      "pid": 50,
+      "module": "App.goods.GoodsManager",
+      "linkModule": "shop",
+      "text": "商品列表管理",
+      "type": "extension",
+      "tabIcon": "image/micon/product.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "url": "/admin/Goods/getExtModules.action",
+      "authorize": {
+        "GoodsGroup": [
+          "getGoodsGroups"
+        ],
+        "GoodsParameter": [
+          "getGroups",
+          "getGroupSet"
+        ],
+        "Goods": [
+          "addGoods",
+          "getGoods",
+          "deleteGoods",
+          "setGoodsPutAway",
+          "setGoodSoldOut",
+          "updateGoodsSales",
+          "updateGoodsTitle",
+          "updateGoodsBrand",
+          "updateGoodsValidTime",
+          "getSingleGoods",
+          "updateGoods"
+        ],
+        "Brand": [
+          "getBrands"
+        ],
+        "Logistics": [
+          "getTemplatesByKeyword"
+        ],
+        "Support": [
+          "getSupportByGroup"
+        ]
+      }
+    },
+    {
+      "id": 5003,
+      "pid": 50,
+      "module": "App.goods.ParameterManager",
+      "linkModule": "shop",
+      "text": "商品属性管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_58.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3,
+      "authorize": {
+        "GoodsParameter": [
+          "getGroups",
+          "getParameters",
+          "getParameterList",
+          "getValues",
+          "addParameter",
+          "deleteParameters",
+          "updateParameter",
+          "addValue",
+          "updateValue",
+          "deleteValues",
+          "relParameters",
+          "removeRelParameters"
+        ]
+      }
+    },
+    {
+      "id": 5004,
+      "pid": 50,
+      "module": "App.goods.GoodsBrandManager",
+      "linkModule": "shop",
+      "text": "商品品牌管理",
+      "type": "normal",
+      "tabIcon": "image/micon/brand.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4,
+      "authorize": {
+        "Brand": [
+          "getBrands",
+          "addBrand",
+          "deleteBrand",
+          "updateBrand"
+        ]
+      }
+    },
+    {
+      "id": 5005,
+      "pid": 50,
+      "module": "App.goods.GoodsCommentManager",
+      "linkModule": "shop",
+      "text": "商品评论管理",
+      "type": "normal",
+      "tabIcon": "image/micon/comment_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "GoodsComment": [
+          "getComments",
+          "deleteComments"
+        ]
+      }
+    },
+    {
+      "id": 5006,
+      "pid": 50,
+      "module": "App.support.SupportManager",
+      "linkModule": "shop",
+      "text": "商品服务管理",
+      "type": "normal",
+      "tabIcon": "image/micon/goods_service.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 6,
+      "authorize": {
+        "Support": [
+          "addSupport",
+          "delSupport",
+          "updateSupport",
+          "getSupports"
+        ]
+      }
+    },
+    {
+      "id": 51,
+      "pid": 5,
+      "module": "",
+      "linkModule": "shop",
+      "text": "订单管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 6
+    },
+    {
+      "id": 5101,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "全部订单管理",
+      "type": "normal",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 7,
+      "authorize": {
+        "User": [
+          "getOrderUsers"
+        ],
+        "Goods": [
+          "getGoods"
+        ],
+        "UserAddress": [
+          "getUserAddressByUserUid"
+        ],
+        "Order": [
+          "addOrder",
+          "getOrderPrices",
+          "getOrders",
+          "getOrder",
+          "sendOutOrder",
+          "setOrderFinish",
+          "deleteOrders",
+          "setOrderDelivery",
+          "setOrderCancel",
+          "updateOrderPrice",
+          "updateOrderAddress",
+          "updateOrderDelivery",
+          "getOrderPlatforms"
+        ],
+        "Logistics": [
+          "getLogisticsCompany"
+        ],
+        "Area": [
+          "getProvince",
+          "getCity",
+          "getArea"
+        ],
+        "AfterSales": [
+          "addAfterSales"
+        ]
+      }
+    },
+    {
+      "id": 5102,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "新建订单管理",
+      "type": "create",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 8
+    },
+    {
+      "id": 5103,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "已支付订单管理",
+      "type": "pay",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 9
+    },
+    {
+      "id": 5104,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "已发货订单管理",
+      "type": "delivery",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 10
+    },
+    {
+      "id": 5105,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "已完成订单管理",
+      "type": "finish",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 11
+    },
+    {
+      "id": 5106,
+      "pid": 51,
+      "module": "App.order.OrderManager",
+      "linkModule": "shop",
+      "text": "已取消订单管理",
+      "type": "cancel",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 12
+    },
+    {
+      "id": 52,
+      "pid": 5,
+      "module": "",
+      "linkModule": "shop",
+      "text": "促销管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5
+    },
+    {
+      "id": 5201,
+      "pid": 52,
+      "module": "App.discount.DiscountManger",
+      "linkModule": "shop",
+      "text": "促销活动管理",
+      "type": "normal",
+      "tabIcon": "image/micon/discount.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Discount": [
+          "addDiscount",
+          "deleteDiscount",
+          "getDiscounts",
+          "updateDiscount",
+          "getDiscountInit",
+          "enableDiscount",
+          "disableDiscount",
+          "getDiscount",
+          "getDiscountGoods",
+          "addDiscountGoods",
+          "removeDiscountGoods",
+          "getSimpleDiscountGoods"
+        ],
+        "Goods": [
+          "getGoods"
+        ],
+        "Brand": [
+          "getBrands"
+        ]
+      }
+    },
+    {
+      "id": 5202,
+      "pid": 52,
+      "module": "App.coupon.CouponManager",
+      "linkModule": "shop",
+      "text": "优惠券管理",
+      "type": "normal",
+      "tabIcon": "image/micon/coupon.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Coupon": [
+          "getCouponInit",
+          "addCoupon",
+          "delCoupons",
+          "updateCoupon",
+          "enableCoupons",
+          "finishCoupons",
+          "getCoupons",
+          "addCouponGoods",
+          "getCouponGoods",
+          "removeCouponGoods",
+          "getUserCoupons",
+          "declareUserCoupons"
+        ],
+        "Goods": [
+          "getGoods"
+        ]
+      }
+    },
+    {
+      "id": 5203,
+      "pid": 52,
+      "module": "App.spcard.ShoppingCardManager",
+      "linkModule": "shop",
+      "text": "购物卡管理",
+      "type": "normal",
+      "tabIcon": "image/micon/card.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "ShoppingCard": [
+          "getShoppingCards",
+          "addShoppingCard",
+          "updateShoppingCard",
+          "declareShoppingCard",
+          "buildShoppingCard",
+          "getShoppingCardList",
+          "declareShoppingCardList",
+          "getShoppingCardSpending",
+          "exportShoppingCardList"
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "pid": 5,
+      "module": "",
+      "linkModule": "shop",
+      "text": "售后管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 7
+    },
+    {
+      "id": 5301,
+      "pid": 53,
+      "module": "App.aftersales.AfterSalesManager",
+      "linkModule": "shop",
+      "text": "全部售后单",
+      "type": "normal",
+      "tabIcon": "image/micon/order_2.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "AfterSales": [
+          "getAfterSales",
+          "getAfterSaleProgress",
+          "getAfterSalesById",
+          "cancelAfterSales",
+          "rebackGoods",
+          "repairFailure",
+          "repairSuccess",
+          "resendGoods",
+          "createRefundOrder",
+          "sureStartRepair",
+          "sureCheckGoodsSuccess",
+          "sureCheckGoodsFailure",
+          "sureGetGoods",
+          "auditRefused",
+          "auditPass",
+          "getRefundMoney"
+        ],
+        "UserAddress": [
+          "getUserAddressByUserUid"
+        ],
+        "Area": [
+          "getProvince",
+          "getCity",
+          "getArea"
+        ],
+        "Logistics": [
+          "getLogisticsCompany"
+        ]
+      }
+    },
+    {
+      "id": 5302,
+      "pid": 53,
+      "module": "App.aftersales.AfterSalesManager",
+      "linkModule": "shop",
+      "text": "退货申请单",
+      "type": "REFUND",
+      "tabIcon": "image/micon/return_goods.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2
+    },
+    {
+      "id": 5303,
+      "pid": 53,
+      "module": "App.aftersales.AfterSalesManager",
+      "linkModule": "shop",
+      "text": "换货申请单",
+      "type": "EXCHANGE",
+      "tabIcon": "image/micon/charge_goods.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3
+    },
+    {
+      "id": 5304,
+      "pid": 53,
+      "module": "App.aftersales.AfterSalesManager",
+      "linkModule": "shop",
+      "text": "维修申请单",
+      "type": "REPAIR",
+      "tabIcon": "image/micon/repair.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4
+    },
+    {
+      "id": 5305,
+      "pid": 53,
+      "module": "App.refund.RefundOrderManager",
+      "linkModule": "shop",
+      "text": "退款单管理",
+      "type": "normal",
+      "tabIcon": "image/micon/refund.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "RefundOrder": [
+          "getRefundOrders",
+          "setRefundPass",
+          "setRefundReject",
+          "startRefund"
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "pid": 5,
+      "module": "",
+      "linkModule": "shop",
+      "text": "流程管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 10
+    },
+    {
+      "id": 5501,
+      "pid": 55,
+      "module": "App.logistics.LogisticsTemplateManager",
+      "linkModule": "shop",
+      "text": "运费模板管理",
+      "type": "normal",
+      "tabIcon": "image/micon/car.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 11,
+      "authorize": {
+        "Logistics": [
+          "getTemplates",
+          "addTemplates",
+          "delTemplates",
+          "updateTemplate",
+          "getTemplate"
+        ],
+        "Area": [
+          "getClassifyArea",
+          "getAreaByCodes"
+        ]
+      }
+    },
+    {
+      "id": 5503,
+      "pid": 55,
+      "module": "App.payment.PaymentChannelManager",
+      "linkModule": "shop",
+      "text": "支付方式管理",
+      "type": "normal",
+      "tabIcon": "image/micon/pay_channel.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 13,
+      "authorize": {
+        "Payment": [
+          "addChannel",
+          "deleteChannel",
+          "updateChannel",
+          "getChannels",
+          "getModels"
+        ]
+      }
+    },
+    {
+      "id": 5504,
+      "pid": 55,
+      "module": "App.logistics.LogisticsCompanyManager",
+      "linkModule": "shop",
+      "text": "物流公司管理",
+      "type": "normal",
+      "tabIcon": "image/micon/wl.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 14,
+      "authorize": {
+        "Logistics": [
+          "addCompany",
+          "deleteCompany",
+          "updateCompany",
+          "setDefaultCompany",
+          "getCompany"
+        ]
+      }
+    },
+    {
+      "id": 5505,
+      "pid": 55,
+      "module": "App.order.UserAddressManager",
+      "linkModule": "shop",
+      "text": "收货地址管理",
+      "type": "normal",
+      "tabIcon": "image/micon/address.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 15,
+      "authorize": {
+        "User": [
+          "getOrderUsers"
+        ],
+        "UserAddress": [
+          "getUserAddress",
+          "addUserAddress",
+          "deleteUserAddress",
+          "updateUserAddress"
+        ],
+        "Area": [
+          "getProvince",
+          "getCity",
+          "getArea"
+        ]
+      }
+    }
+  ]
+}

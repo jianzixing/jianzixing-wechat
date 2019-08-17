@@ -1,0 +1,245 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 3,
+      "pid": 0,
+      "module": "config",
+      "linkModule": "config",
+      "text": "配置",
+      "type": "normal",
+      "tabIcon": "image/jeticon/htaccess_dark.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 4
+    },
+    {
+      "id": 30,
+      "pid": 3,
+      "module": "",
+      "linkModule": "config",
+      "text": "基础配置",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 3002,
+      "pid": 30,
+      "module": "App.trigger.TriggerManager",
+      "linkModule": "config",
+      "text": "触发器管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_13.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "Processor": [
+          "getEnableProcessors"
+        ],
+        "Trigger": [
+          "getEvents",
+          "addTrigger",
+          "updateTrigger",
+          "getTriggers",
+          "deleteTriggers",
+          "getProcessorImpls"
+        ],
+        "Email": [
+          "getEnableEmails"
+        ],
+        "Sms": [
+          "getEnableSms"
+        ]
+      }
+    },
+    {
+      "id": 3003,
+      "pid": 30,
+      "module": "App.marketing.EmailManager",
+      "linkModule": "config",
+      "text": "邮件服务管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_13.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3,
+      "authorize": {
+        "Email": [
+          "getEmails",
+          "addEmail",
+          "delEmails",
+          "updateEmail",
+          "enableEmails",
+          "disableEmails"
+        ]
+      }
+    },
+    {
+      "id": 3004,
+      "pid": 30,
+      "module": "App.marketing.SmsManager",
+      "linkModule": "config",
+      "text": "短信服务管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_13.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4,
+      "authorize": {
+        "Sms": [
+          "getSmsImpls",
+          "addSms",
+          "updateSms",
+          "delSms",
+          "getSms",
+          "enableSms",
+          "disableSms"
+        ]
+      }
+    },
+    {
+      "id": 3005,
+      "pid": 30,
+      "module": "App.marketing.MessageManager",
+      "linkModule": "config",
+      "text": "站内信管理",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_7.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "Message": [
+          "getMessages",
+          "delMessage"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "pid": 3,
+      "module": "",
+      "linkModule": "config",
+      "text": "页面配置",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 3118,
+      "pid": 32,
+      "module": "",
+      "linkModule": "config",
+      "text": "微站",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 3119,
+      "pid": 3118,
+      "module": "App.page.PageIndexManager",
+      "linkModule": "config",
+      "text": "首页配置",
+      "type": "normal",
+      "tabIcon": "image/micon/page.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 17,
+      "authorize": {
+        "Page": [
+          "addPage",
+          "updatePage",
+          "deletePage",
+          "getIndexPages",
+          "addPageContent",
+          "deletePageContent",
+          "updatePageContent",
+          "getPageContent",
+          "setIndexEnable"
+        ],
+        "Goods": [
+          "getGoods"
+        ]
+      }
+    },
+    {
+      "id": 3120,
+      "pid": 3118,
+      "module": "App.page.PageActivityManager",
+      "linkModule": "config",
+      "text": "活动页配置",
+      "type": "normal",
+      "tabIcon": "image/micon/page.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 17,
+      "authorize": {
+        "Page": [
+          "addPage",
+          "updatePage",
+          "deletePage",
+          "getActivityPages",
+          "addPageContent",
+          "deletePageContent",
+          "updatePageContent",
+          "getPageContent",
+          "getPageContent"
+        ],
+        "Goods": [
+          "getGoods"
+        ]
+      }
+    },
+    {
+      "id": 3121,
+      "pid": 3118,
+      "module": "App.hotsearch.HotSearchManager",
+      "linkModule": "config",
+      "text": "热门搜索",
+      "type": "normal",
+      "tabIcon": "image/micon/page.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 17,
+      "authorize": {
+        "HotSearch": [
+          "getHotSearch",
+          "addHotSearch",
+          "delHotSearch",
+          "updateHotSearch"
+        ]
+      }
+    }
+  ]
+}

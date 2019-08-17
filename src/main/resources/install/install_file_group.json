@@ -1,0 +1,37 @@
+{
+  "class": "com.jianzixing.webapp.tables.file.TableFileGroup",
+  "items": [
+    {
+      "id": 1,
+      "pid": 0,
+      "groupName": "临时文件夹",
+      "expanded": 1,
+      "leaf": 0,
+      "groupSourceType": "0"
+    },
+    {
+      "id": 2,
+      "pid": 0,
+      "groupName": "用户文件夹",
+      "expanded": 1,
+      "leaf": 0,
+      "groupSourceType": "0"
+    },
+    {
+      "id": 3,
+      "pid": 0,
+      "groupName": "系统文件夹",
+      "expanded": 1,
+      "leaf": 0,
+      "groupSourceType": "0"
+    },
+    {
+      "id": 4,
+      "pid": 0,
+      "groupName": "自定义文件夹",
+      "expanded": 1,
+      "leaf": 0,
+      "groupSourceType": "0"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "class": "com.jianzixing.webapp.tables.support.TableSupport",
+  "items": [
+    {
+      "id": 1,
+      "name": "七天无理由退货",
+      "type": 1,
+      "fixed": 0,
+      "serTime": 168,
+      "price": 0,
+      "detail": "购买之日起七天无理由退货",
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "七天内换货",
+      "type": 2,
+      "fixed": 0,
+      "serTime": 168,
+      "price": 0,
+      "detail": "购买之日起7内非人为问题可换货",
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 3,
+      "name": "半年质保服务",
+      "type": 3,
+      "fixed": 0,
+      "serTime": 4392,
+      "price": 0,
+      "detail": "购买之日起半年内非人为问题免费维修",
+      "createTime": "2019-01-01 00:00:00"
+    }
+  ]
+}

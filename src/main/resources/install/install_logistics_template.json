@@ -1,0 +1,13 @@
+{
+  "class": "com.jianzixing.webapp.tables.logistics.TableLogisticsTemplate",
+  "items": [
+    {
+      "id": 1,
+      "name": "包邮",
+      "free": 1,
+      "type": 10,
+      "deliveryType": "10,11,12",
+      "createTime": "2019-01-01 00:00:00"
+    }
+  ]
+}

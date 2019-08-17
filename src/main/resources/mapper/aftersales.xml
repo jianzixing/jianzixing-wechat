@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//localhost//DTD Config 3.0//EN" "/mimosa-mapper.dtd">
+<mapper>
+    <select id="getASSearch">
+        select t3.id as id from t_order t1,t_order_goods t2,t_after_sales t3
+        where t1.id=t2.order_id and t2.id=t3.order_goods_id and t1.id=t3.order_id
+        <if test="keyword!=null">
+            and (t1.number like #{keyword} or t2.goods_name like #{keyword} or t2.serial_number like #{keyword})
+        </if>
+        <if test="userId!=null">
+            and t3.user_id=#{userId}
+        </if>
+        <if test="status1!=null">
+            and t3.status!=#{status1}
+        </if>
+        <if test="status2!=null">
+            and t3.status!=#{status2}
+        </if>
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+
+    <select id="getOrderSearch">
+        select t2.id as id from t_order t1,t_order_goods t2
+        where t1.id=t2.order_id
+        <if test="keyword!=null">
+            and (t1.number like #{keyword} or t2.goods_name like #{keyword} or t2.serial_number like #{keyword})
+        </if>
+        <if test="userId!=null">
+            and t1.user_id=#{userId}
+        </if>
+        <if test="status!=null">
+            and t1.status=#{status}
+        </if>
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+</mapper>

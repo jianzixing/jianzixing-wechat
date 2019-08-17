@@ -1,0 +1,185 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 1,
+      "pid": 0,
+      "module": "user",
+      "linkModule": "user",
+      "text": "会员",
+      "type": "normal",
+      "tabIcon": "image/jeticon/userDefined.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 1
+    },
+    {
+      "id": 10,
+      "pid": 1,
+      "module": "",
+      "linkModule": "user",
+      "text": "会员管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 1001,
+      "pid": 10,
+      "module": "App.user.Member",
+      "linkModule": "user",
+      "text": "会员管理",
+      "type": "normal",
+      "tabIcon": "image/micon/user.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "User": [
+          "getUsers",
+          "deleteUser",
+          "addUser",
+          "updateUser",
+          "resetUserPwd"
+        ]
+      }
+    },
+    {
+      "id": 1006,
+      "pid": 10,
+      "module": "App.user.MemberLevel",
+      "linkModule": "user",
+      "text": "用户等级",
+      "type": "normal",
+      "tabIcon": "image/micon/level_1.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 7,
+      "authorize": {
+        "User": [
+          "getUserLevels",
+          "addUserLevel",
+          "deleteUserLevel",
+          "updateUserLevel"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "pid": 1,
+      "module": "",
+      "linkModule": "user",
+      "text": "积分管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 1101,
+      "pid": 11,
+      "module": "App.integral.IntegralManager",
+      "linkModule": "user",
+      "text": "用户积分管理",
+      "type": "normal",
+      "tabIcon": "image/micon/jifen.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Integral": [
+          "getIntegrals",
+          "getRecordsByUid",
+          "setUserIntegralZero"
+        ]
+      }
+    },
+    {
+      "id": 1102,
+      "pid": 11,
+      "module": "App.integral.IntegralRecordManager",
+      "linkModule": "user",
+      "text": "积分消费记录",
+      "type": "normal",
+      "tabIcon": "image/micon/jifenjl.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "Integral": [
+          "getRecords"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "pid": 1,
+      "module": "",
+      "linkModule": "user",
+      "text": "账户管理",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 1201,
+      "pid": 12,
+      "module": "App.balance.BalanceManager",
+      "linkModule": "user",
+      "text": "用户余额管理",
+      "type": "normal",
+      "tabIcon": "image/micon/balance.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Balance": [
+          "getBalances",
+          "getRecordsByUid"
+        ]
+      }
+    },
+    {
+      "id": 1202,
+      "pid": 12,
+      "module": "App.balance.BalanceRecordManager",
+      "linkModule": "user",
+      "text": "余额消费记录",
+      "type": "normal",
+      "tabIcon": "image/micon/balance_log.png",
+      "expanded": 0,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1,
+      "authorize": {
+        "Balance": [
+          "getRecords"
+        ]
+      }
+    }
+  ]
+}

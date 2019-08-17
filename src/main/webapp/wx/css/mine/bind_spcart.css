@@ -1,0 +1,100 @@
+.bind_ecard .ecard_notice {
+    padding: 7px 10px 7px 30px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #de8c17;
+    background: #fcf6ed;
+    position: relative;
+}
+
+.bind_ecard .ecard_notice::before {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -7px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAzUExURUdwTN+MF/eXL96NF96MF96MF9+NGN+PF9+NF+SRGt+NGN6MF96MF9+MGP//f9+MF96MFx0h3iIAAAAQdFJOUwCiBura8lRBfxxrsYyKAsENOQwqAAAAs0lEQVQoz91TSRLDIAwDbENYQvT/19bJMC3O0lsv1c0jLCwsnPsgChQS3T08DvgHOpdFUbL7AUL0LMI+hjs2Mgb4Ontfd0+1tbq7W/uJVpbKoRoKKX9SVsm3oazXGP3AoMluJnCwzWU+Xmy7hxg3QczTMqqdpYKnStAs3SBTBSyWXoC/p3tOGs9koKFNY0cJD0hH83da1zsUN1BKhG2UQ7xP89R6mXLOzJ7T8JT07Im8+UMvKycM098htZkAAAAASUVORK5CYII=) no-repeat 50%;
+    background-size: 15px;
+}
+.bind_ecard .ecard_form {
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-family: -apple-system, Helvetica, sans-serif;
+}
+.bind_ecard .ecard_form_title {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.bind_ecard .ecard_form_title .icon_info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 24px;
+    position: relative;
+}
+.bind_ecard .ecard_form_title .icon_info::after {
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURczMzEdwTM3Nzc/Pz83NzczMzNDQ0MzMzMzMzMzMzMzMzAf2U20AAAALdFJOU/8AsyFU8xOjbHXZH56D6AAAAJ9JREFUGNNjEBQUFG5aGqVhCGQwCAqKFTAAAXsimOPKUGKW7M4QAuJIMCgDVQgaMTQCOQ6cgmAwgUWQQSxgIoQjyZrIIM4EZAgpAgmFQgYDZhjHgJmhoVAQCsQ5GBQcYRwRJoYFhjBlwlwMAUCbBQUYgYQYKyoHrAzMASoDGwDmAA0AGw3mAI0GWwrmAC1FcQ6KQ1G8gOo5FG+jBggiqAC/xCN3pHBpOgAAAABJRU5ErkJggg==) no-repeat 50%;
+    background-size: 12px;
+}
+.bind_ecard .ecard_form_input {
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 30px 0 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background: #f7f7f7;
+}
+.bind_ecard .ecard_form_input .input_text {
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 1;
+    font-size: 100%;
+    font-family: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+.bind_ecard .ecard_form .mod_btns {
+    margin: 10px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.bind_ecard .ecard_form .mod_btns .mod_btn {
+    color: #fff;
+    display: block;
+    box-sizing: border-box;
+    width: 100px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 2px;
+    position: relative;
+    border-color: #ddd;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-decoration: none;
+    background: #e93b3d;
+    border-radius: 4px;
+}

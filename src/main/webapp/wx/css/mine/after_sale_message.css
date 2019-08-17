@@ -1,0 +1,54 @@
+.contents {
+    width: 100%;
+}
+
+.contents li {
+    padding: 24px 27px 11px;
+}
+
+.contents .split {
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    border-color: black black rgb(238, 238, 238);
+}
+
+.contents .title {
+    font-size: 15px;
+    color: rgb(46, 45, 45);
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.contents .title::before {
+    content: '';
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 25px;
+    height: 16px;
+}
+.contents .title.bs::before {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAeCAMAAABkHdyoAAAA+VBMVEUAAAD/mjX/mTP/mjP7lC3/oTn/mjPvhx//mjP/nTH/mTP/mjPyiiP6lS77li7/mzT/mjX/mzX/mzT/nDT/mTP/mTTvhyD/mjP/mTP/mTT/mjX/mjb/nDT/mTP/mTP/////ypb/u3b/q1f/+vX/tWv/rl3/6dT/2bP/wob/mzj/06f/+PD/8+f/16//s2b/5Mr/rVv//Pr/4cT/4MD/1av/0KL/x4//+/j/sGL//vz/79//58//0qb/vXv/qVT/qFD/pUv/nTruhh7/9u3/8eT/7dr/3br/27b/zp7/o0f/oEH/v3//tm7/nTz/6NL/5cz/4sb/zJnqghkAyPGtAAAAHnRSTlMAMHj0Nwb97dcPyL2xnpZtZVlAG+vi4eDNin5MLCNUzDrcAAAB4ElEQVQ4y5WUh3KbQBCGcSTFshM7iZ1e9hcgISGKaEK9EPXm9v4P4zuQBoQ8Y/zNsLc783HsDjcnMD5f5ug13n+7uhU4tx8oG7kvXM9o8y/kWSeUnWJBuKQ3cCMkplQbmpQW5t01xXwSiFOK0OFEiU9kiiEK6lESbvQu0pFCI+rhmH5Cr9VqPuCzxcOExQ3XvVKMG+t7XGzC6POC6+1KTO1IryiKokNjEZixOCKyTBMxY3OU0MuwZVlu7Z8OwrnGhmHowMxg8DqpV4n87pisiU/UiHR16zF7qrJ0+zBO6YEHuU2iDGcX6oHbAvSSg1ow6KGzPNaVKTSLZUMdsxnXydCM8nppszaB+TDVjKO3nCZnIT/chXqgSn0ZvQWmXXt00vtogAhRDZsZNruALu4WcE04p6OKmFuWdY82Rbptu6IqToEu3WP7ki5JUuOgk7lWBwpkX2uRCa19qofEel0Dqiu1MyFqolVO6VI9xDPHOthodUDzrGD1iDsmVOFEeu6g79nZwEQlWrkDlVYdoDPgv6y/js57kS9Db0MHHqt1iw4sF8sKxfwRflN2vhaEQjG7zm+Osx9Z741fAufiOpfF/nkj7Cn8O3uB/PX5f84VL/5eCK+T/3j+9PQ9rjO9kdj4GUbBp1wI0xd/AAAAAElFTkSuQmCC) no-repeat;
+    background-size: 25px 16px;
+}
+.contents .title.us::before {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAeCAMAAABkHdyoAAAA5FBMVEUAAABQiv9PiP8uY9BOiP9blPdNif9Oif88cuKt1f9Nif9OiP8tYs5OiP8vZdEvYs44ceBNiv9Qi/9Pi/9QkP9NiP9OiP9Nif9OiP9Nif9Oif9Piv9Oiv9Niv9Ri/9Ri/9NiP////90o//n7/+/1P+Zuv9Ujf+wyv/t8/+nxP+Ksf9vn//h6//V4/+hwP+Ns/9rnP/7/P/e6f/w9f/q8f+1zv+syP9elP9ZkP/0+P/R4f/I2v+Tt/+DrP9nmv/l7v/j7P/b5/+kwv+evv9tnf8tYs7W4//K3P+4z/+Wuf99qP95pf/o7JXWAAAAIHRSTlMAMHjY8wfXZxwC4cjCvapyaFlAIBD37M2dlYp+b0w5LMSNXfcAAAFHSURBVDjLrc/XcoJgEIbhNbFEjcaW3nYVW7AEAbEbW+r9308WESnC+Gcmz8E3HLwwLLDiTQqPiqYTSTDloygmc8b1EwrLJCEZR3EJKOAfpCGBplrZQ0bb4F01XPfCCZrK5FFxijEt0bHPlTZTaMHbs/KpZGqTKm158x6yBr3yylbeIY/j+fjFNvHnapMNSef9tPO+c7E/dxPItS4bUod3aeeLuk0n+udTm/RRdXHnP6S0mEJz3oqV6/SFHk7eDTh1TNOwvElSjTVI5i1buUazsFyiif/fDVIxJK8Nae3PVySF5SvScJfX5Fmf3vh5Tt8B+YO5LZrsc4XI/G6V3zlwCY/I1iPc6vQN1EejuoE406aHeRxiVxhsgIfuAfIoLB4DgDvROhUBU+FaJI7elmCn9BxhuVNTNhcJUoyBT3azOb84A0ExgfYXS3iijLm3EmMAAAAASUVORK5CYII=) no-repeat;
+    background-size: 25px 16px;
+}
+
+.contents .message {
+    font-size: 12px;
+    color: rgb(132, 132, 132);
+    line-height: 16px;
+    display: inline-block;
+    margin: 11px 0px 0px;
+}
+
+.contents .date {
+    font-size: 13px;
+    color: rgb(132, 132, 132);
+    line-height: 15px;
+    text-align: right;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}

@@ -1,0 +1,19 @@
+{
+  "class": "com.jianzixing.webapp.tables.trigger.TableTriggerValue",
+  "items": [
+    {
+      "triggerId": 3,
+      "index": 0,
+      "name": "赠送积分数量",
+      "code": "amount",
+      "value": "${payPrice}"
+    },
+    {
+      "triggerId": 4,
+      "index": 0,
+      "name": "增加等级分数",
+      "code": "amount",
+      "value": "${payPrice}*1"
+    }
+  ]
+}

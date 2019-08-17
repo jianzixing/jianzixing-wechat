@@ -1,0 +1,148 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f7f7f7;
+    font-family: -apple-system, "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.award-body {
+    width: 100%;
+    height: 100%;
+}
+
+.award-body .award-nav {
+    position: relative;
+    width: 100%;
+    height: 12vw;
+    line-height: 12vw;
+    background-color: #37b05a;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.award-body .award-nav .back {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 100%;
+    left: 5px;
+    background: url("../img/back.png") no-repeat center;
+    background-size: 24px;
+}
+
+.award-body .award-nav .title {
+
+}
+
+.award-body .award-list {
+    width: 100%;
+}
+
+.award-body .award-list .tab {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E5E5E5;
+    text-align: center;
+}
+
+.award-body .award-list .tab .item {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+}
+
+.award-body .award-list .tab .item .text {
+    width: 80%;
+    padding: 10px 0;
+}
+
+.award-body .award-list .tab .item.curr {
+    color: #37b05a;
+}
+
+.award-body .award-list .tab .item.curr .text {
+    border-bottom: 2px solid #37b05a;
+}
+
+.award-body .award-list .contents {
+    width: 100%;
+    position: relative;
+}
+
+.award-body .award-list .contents .empty_contents {
+    width: 100%;
+    height: 88vh;
+    position: relative;
+    text-align: center;
+    line-height: 88vh;
+    color: #999999;
+    font-size: 15px;
+}
+
+.award-body .award-list .contents .item {
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 15px;
+    border-top: 1px solid #E9E9E9;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.award-body .award-list .contents .goods {
+    overflow: hidden;
+    padding: 20px 10px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.award-body .award-list .contents .img {
+    position: absolute;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    float: left;
+}
+
+.award-body .award-list .contents .img img {
+    width: 40px;
+    height: 40px;
+}
+
+.award-body .award-list .contents .title {
+    float: left;
+    margin-left: 70px;
+    font-size: 14px;
+    color: #999999;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.award-body .award-list .contents .amount {
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #37b05a;
+    text-align: left;
+}
+
+.award-body .award-list .contents .amount .div1 {
+    display: block;
+    float: left;
+}
+
+.award-body .award-list .contents .amount .div2 {
+    display: block;
+    float: right;
+}
+
+.award-body .award-list .contents .amount .number {
+    padding: 5px 5px;
+    color: #1caa70;
+}

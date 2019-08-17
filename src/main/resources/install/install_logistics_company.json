@@ -1,0 +1,131 @@
+{
+  "class": "com.jianzixing.webapp.tables.logistics.TableLogisticsCompany",
+  "items": [
+    {
+      "id": 1,
+      "name": "中国邮政",
+      "code": "zgyz",
+      "logo": "init_express_zgyz.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 2,
+      "name": "圆通速递",
+      "code": "ytsd",
+      "logo": "init_express_ytsd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 3,
+      "name": "顺丰速运",
+      "code": "sfsy",
+      "logo": "init_express_sfsy.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 4,
+      "name": "天天快递",
+      "code": "ttkd",
+      "logo": "init_express_ttkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 5,
+      "name": "优速快递",
+      "code": "yskd",
+      "logo": "init_express_yskd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 6,
+      "name": "快捷快递",
+      "code": "kjkd",
+      "logo": "init_express_kjkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 7,
+      "name": "国通快递",
+      "code": "gtkd",
+      "logo": "init_express_gtkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 8,
+      "name": "全峰快递",
+      "code": "qfkd",
+      "logo": "init_express_qfkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 9,
+      "name": "宅急送",
+      "code": "zjs",
+      "logo": "init_express_zjs.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 10,
+      "name": "EMS",
+      "code": "ems",
+      "logo": "init_express_ems.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 11,
+      "name": "韵达快递",
+      "code": "ydkd",
+      "logo": "init_express_ydkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 12,
+      "name": "百世快递",
+      "code": "bskd",
+      "logo": "init_express_bskd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 13,
+      "name": "申通快递",
+      "code": "stkd",
+      "logo": "init_express_stkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    },
+    {
+      "id": 14,
+      "name": "中通快递",
+      "code": "ztkd",
+      "logo": "init_express_ztkd.jpg",
+      "isDefault": 0,
+      "enable": 1,
+      "createTime": "2019-01-01 00:00:00"
+    }
+  ]
+}

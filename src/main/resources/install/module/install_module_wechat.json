@@ -1,0 +1,260 @@
+{
+  "class": "com.jianzixing.webapp.tables.system.TableModule",
+  "items": [
+    {
+      "id": 2,
+      "pid": 0,
+      "module": "wechat",
+      "linkModule": "wechat",
+      "text": "微信",
+      "type": "normal",
+      "tabIcon": "image/jeticon/wechat.png",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 1,
+      "pos": 2
+    },
+    {
+      "id": 20,
+      "pid": 2,
+      "module": "",
+      "linkModule": "wechat",
+      "text": "微信功能",
+      "type": "normal",
+      "tabIcon": "",
+      "expanded": 1,
+      "leaf": 0,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 1
+    },
+    {
+      "id": 2001,
+      "pid": 20,
+      "module": "App.wechat.WeChatAccountManager",
+      "linkModule": "wechat",
+      "text": "微信公众号",
+      "type": "normal",
+      "tabIcon": "image/micon/public_account.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 2,
+      "authorize": {
+        "WeChatPublic": [
+          "addAccount",
+          "deleteAccount",
+          "updateAccount",
+          "getAccounts",
+          "getAccountTrees",
+          "enableAccounts",
+          "disableAccounts",
+          "getDefaultAccount",
+          "setDefaultAccount"
+        ],
+        "WeChatUser": [
+          "getUsers"
+        ],
+        "WeChatReply": [
+          "getReplys",
+          "addReply",
+          "delReply",
+          "updateReply"
+        ],
+        "WeChatMaterial": [
+          "getTemporaryMaterials",
+          "getForeverMaterials",
+          "getRemoteMaterials",
+          "deleteForeverMaterials",
+          "addImageText",
+          "getImageTexts",
+          "delImageText",
+          "updateImageText",
+          "uploadImageWeChat",
+          "uploadMaterial"
+        ],
+        "WeChatMass": [
+          "getWeChatLabels",
+          "addMass",
+          "delMasses",
+          "updateMass",
+          "getMesses",
+          "enableMasses",
+          "disableMasses"
+        ],
+        "WeChatQRCode": [
+          "addQRCode",
+          "updateQRCode",
+          "getQRCodes",
+          "deleteQRCodes"
+        ],
+        "WeChatUser": [
+          "getUsers",
+          "syncWeChatUsers",
+          "setUserRemark",
+          "getLabels",
+          "delLabel",
+          "updateLabel",
+          "createLabel",
+          "setUserLabel",
+          "cancelUserLabel"
+        ]
+      }
+    },
+    {
+      "id": 2002,
+      "pid": 20,
+      "module": "App.wechat.WeChatOpenManager",
+      "linkModule": "wechat",
+      "text": "微信第三方平台",
+      "type": "normal",
+      "tabIcon": "image/micon/icon_38.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 3,
+      "authorize": {
+        "WeChatPublic": [
+          "getAccountTrees"
+        ],
+        "WeChatOpen": [
+          "addOpen",
+          "deleteOpens",
+          "updateOpen",
+          "getOpens",
+          "enableOpens",
+          "disableOpens",
+          "getOpenAccounts",
+          "getOpenUrls",
+          "getOpenDetail",
+          "getDefaultMiniProgramAccount",
+          "setDefaultMiniProgramAccount",
+          "getDefaultPublicAccount",
+          "setDefaultPublicAccount"
+        ],
+        "WeChatUser": [
+          "getUsers"
+        ],
+        "WeChatReply": [
+          "getReplys",
+          "addReply",
+          "delReply",
+          "updateReply"
+        ],
+        "WeChatMaterial": [
+          "getTemporaryMaterials",
+          "getForeverMaterials",
+          "getRemoteMaterials",
+          "deleteForeverMaterials",
+          "addImageText",
+          "getImageTexts",
+          "delImageText",
+          "updateImageText",
+          "uploadImageWeChat",
+          "uploadMaterial"
+        ],
+        "WeChatMass": [
+          "getWeChatLabels",
+          "addMass",
+          "delMasses",
+          "updateMass",
+          "getMesses",
+          "enableMasses",
+          "disableMasses"
+        ],
+        "WeChatQRCode": [
+          "addQRCode",
+          "updateQRCode",
+          "getQRCodes",
+          "deleteQRCodes"
+        ],
+        "WeChatUser": [
+          "getUsers",
+          "syncWeChatUsers",
+          "setUserRemark",
+          "getLabels",
+          "delLabel",
+          "updateLabel",
+          "createLabel",
+          "setUserLabel",
+          "cancelUserLabel"
+        ]
+      }
+    },
+    {
+      "id": 2003,
+      "pid": 20,
+      "module": "App.wechat.WeChatMiniProgramMangager",
+      "linkModule": "wechat",
+      "text": "小程序应用管理",
+      "type": "normal",
+      "tabIcon": "image/micon/miniprogram.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 4,
+      "authorize": {
+        "WeChatMiniProgram": [
+          "addMiniProgram",
+          "delMiniPrograms",
+          "updateMiniProgram",
+          "getMiniPrograms",
+          "getDefaultAccount",
+          "setDefaultAccount"
+        ]
+      }
+    },
+    {
+      "id": 2004,
+      "pid": 20,
+      "module": "App.wechat.WeChatWebSiteMangager",
+      "linkModule": "wechat",
+      "text": "网站应用管理",
+      "type": "normal",
+      "tabIcon": "image/micon/website.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 5,
+      "authorize": {
+        "WeChatWebSite": [
+          "addWebSite",
+          "delWebSites",
+          "updateWebSite",
+          "getWebSites",
+          "getDefaultAccount",
+          "setDefaultAccount"
+        ]
+      }
+    },
+    {
+      "id": 2005,
+      "pid": 20,
+      "module": "App.wechat.WeChatAppMangager",
+      "linkModule": "wechat",
+      "text": "移动应用管理",
+      "type": "normal",
+      "tabIcon": "image/micon/app.png",
+      "expanded": 1,
+      "leaf": 1,
+      "isSystem": 1,
+      "top": 0,
+      "pos": 6,
+      "authorize": {
+        "WeChatApp": [
+          "addApp",
+          "delApps",
+          "updateApp",
+          "getApps",
+          "getDefaultAccount",
+          "setDefaultAccount"
+        ]
+      }
+    }
+  ]
+}

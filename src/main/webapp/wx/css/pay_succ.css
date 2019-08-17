@@ -1,0 +1,58 @@
+.pay_succ {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pay_succ img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 30px auto 10px auto;
+}
+
+.pay_succ span {
+    display: block;
+    padding: 10px 30px 0px 30px;
+}
+
+.pay_succ .ps_title {
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+.pay_succ .ps_dsc {
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+}
+
+.pay_succ .tips {
+    display: inline-block;
+    color: #0f74a8;
+    padding: 0px 2px;
+}
+.pay_succ_btn {
+    width: 80%;
+    background-color: #e4393c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+    color: #FFFFFF;
+    display: block;
+    margin: 10px auto;
+}
+
+.pay_succ_btn:link {color: #FFFFFF;}
+.pay_succ_btn:visited {color: #FFFFFF;}
+.pay_succ_btn:hover {color: #FFFFFF;}
+.pay_succ_btn:active {color: #FFFFFF;}
+
+.pay_succ_btn.white {
+    color: #333333;
+    background-color: #f0f0f0;
+    border: 1px solid #D0D0D0;
+}
+.pay_succ_btn.white:link {color: #333333;}
+.pay_succ_btn.white:visited {color: #333333;}
+.pay_succ_btn.white:hover {color: #333333;}
+.pay_succ_btn.white:active {color: #333333;}
