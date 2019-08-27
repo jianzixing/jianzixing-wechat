@@ -2,13 +2,18 @@
 前台预览地址：http://mywx.jianzixing.com.cn/wx/index.jhtml 【请在微信中浏览】  
 后台登录地址：http://mywx.jianzixing.com.cn/admin/login.jhtml
 
+<<<<<<< HEAD
 后台部分预览图
 ---
+=======
+后台部分预览图：  
+>>>>>>> d3e2e2039036913b5ecb37f172777ffef8dc5455
 ![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/01.png)  
 ![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/02.png)  
 ![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/03.png)  
 ![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/04.png)  
 
+<<<<<<< HEAD
 后台模块介绍
 ---
 
@@ -54,6 +59,8 @@
 
 ---
 
+=======
+>>>>>>> d3e2e2039036913b5ecb37f172777ffef8dc5455
 简子行微信公众号商城开源系统是简子行科技有限公司(https://www.jianzixing.com.cn)提供免费开源项目。
 
 由于实际开发中项目要求变化很大，本项目要求有一定开发能力的人使用。
