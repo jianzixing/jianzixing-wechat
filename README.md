@@ -1,7 +1,58 @@
 # jianzixing-wechat
-
 前台预览地址：http://mywx.jianzixing.com.cn/wx/index.jhtml 【请在微信中浏览】  
 后台登录地址：http://mywx.jianzixing.com.cn/admin/login.jhtml
+
+后台部分预览图
+---
+![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/01.png)  
+![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/02.png)  
+![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/03.png)  
+![image](https://github.com/jianzixing/jianzixing-wechat/blob/master/preview/04.png)  
+
+后台模块介绍
+---
+
+- 会员模块
+  - 会员信息
+  - 会员等级
+  - 会员积分
+  - 会员余额
+- 商城模块
+  - 商品分类
+  - 商品信息
+  - 商品品牌
+  - 商品属性
+  - 促销管理
+  - 订单管理
+  - 售后管理
+  - 物流配置
+- 微信
+  - 微信公众号
+  - 微信第三方平台
+  - 小程序应用
+  - 网站应用
+  - 移动应用
+- 配置
+  - 触发器
+  - 邮件配置
+  - 短信配置
+  - 站内信管理
+  - 数据配置
+  - 活动页面配置
+- 系统
+  - 管理员管理
+  - 权限管理
+  - 系统参数
+
+技术栈介绍
+---
+- extjs
+- spring
+- springmvc
+- mimosa-mvc（自主研发，简化MVC）
+- mimosa-orm（自主研发，简化ORM）
+
+---
 
 简子行微信公众号商城开源系统是简子行科技有限公司(https://www.jianzixing.com.cn)提供免费开源项目。
 
