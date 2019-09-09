@@ -49,8 +49,7 @@
 - extjs
 - spring
 - springmvc
-- mimosa-mvc（自主研发，简化MVC）
-- mimosa-orm（自主研发，简化ORM）
+- mimosa
 
 ---
 
